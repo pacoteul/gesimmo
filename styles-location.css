@@ -285,3 +285,39 @@
         order: -1;
     }
 }
+
+
+/* =========================================
+   MOBILE HERO UN-ZOOM (Cinematic)
+   ========================================= */
+@media (max-width: 992px) {
+    .hero-video {
+        object-fit: contain !important;
+        background-color: #000;
+    }
+    .video-container {
+        background-color: #000;
+    }
+    .hero-bg, .loc-hero, .vente-hero, .gestion-hero, .project-bg {
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+        background-position: top center !important;
+        background-color: #000 !important;
+    }
+    .construction-hero, .vente-hero, .loc-hero, .gestion-hero {
+        background-color: #000 !important;
+    }
+    .bottom-left-hero {
+        bottom: 5% !important;
+        left: 5% !important;
+        max-width: 90% !important;
+        /* Add a small dark gradient behind text just in case */
+        background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+    }
+    .hero-content {
+        /* for index.html */
+        bottom: 10% !important;
+        top: auto !important;
+        transform: translateY(0) !important;
+    }
+}

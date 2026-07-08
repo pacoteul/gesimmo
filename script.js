@@ -22,8 +22,8 @@ const lenis = new Lenis({
     gestureDirection: 'vertical',
     smooth: true,
     mouseMultiplier: 1,
-    smoothTouch: false,
-    touchMultiplier: 2,
+    smoothTouch: true,
+    touchMultiplier: 1.5,
     infinite: false,
 });
 
@@ -97,24 +97,48 @@ function updateScrollEffects() {
         const container2 = document.getElementById('video-container-2');
         const container3 = document.getElementById('video-container-3');
 
+        
+
+        
+        const content1 = document.getElementById('hero-content-1');
+        const content2_loc = document.getElementById('location-content-1');
+        const content3_gest = document.getElementById('gestion-content-1');
+
+        // Helper to fade text (Hidden -> Visible -> Hidden)
+        const updateFade = (element, progress) => {
+            if (element) {
+                element.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                
+                // Visible only between 15% and 40% of the video's scroll
+                if (progress > 0.15 && progress < 0.40) {
+                    element.style.opacity = '1';
+                    element.style.pointerEvents = 'auto';
+                    element.style.transform = 'translateY(0)'; // Centered normally (Flexbox takes care of X axis)
+                } else {
+                    element.style.opacity = '0';
+                    element.style.pointerEvents = 'none';
+                    
+                    if (progress <= 0.15) {
+                        element.style.transform = 'translateY(30px)'; // Hidden slightly below
+                    } else {
+                        element.style.transform = 'translateY(-30px)'; // Hidden slightly above
+                    }
+                }
+            }
+        };
+
         // First third of scroll (0 to 0.333) is Video 1
         if (scrollProgress < 0.333) {
             if (container1) { container1.style.opacity = 1; container1.style.pointerEvents = 'auto'; }
             if (container2) { container2.style.opacity = 0; container2.style.pointerEvents = 'none'; }
             if (container3) { container3.style.opacity = 0; container3.style.pointerEvents = 'none'; }
             
-            // Map 0 -> 0.333 to 0 -> 1 for video 1
             let v1Progress = scrollProgress * 3;
             if (heroVideo && videoDuration > 0) heroVideo.currentTime = videoDuration * v1Progress;
             
-            // Toggle text at 1 second
-            if (heroVideo && heroVideo.currentTime >= 1) {
-                if (content1) content1.classList.add('hidden');
-                if (content2) content2.classList.add('visible');
-            } else {
-                if (content1) content1.classList.remove('hidden');
-                if (content2) content2.classList.remove('visible');
-            }
+            updateFade(content1, v1Progress);
+            if(content2_loc) content2_loc.style.opacity = '0';
+            if(content3_gest) content3_gest.style.opacity = '0';
         } 
         // Second third of scroll (0.333 to 0.666) is Video 2
         else if (scrollProgress >= 0.333 && scrollProgress < 0.666) {
@@ -122,9 +146,12 @@ function updateScrollEffects() {
             if (container2) { container2.style.opacity = 1; container2.style.pointerEvents = 'auto'; }
             if (container3) { container3.style.opacity = 0; container3.style.pointerEvents = 'none'; }
             
-            // Map 0.333 -> 0.666 to 0 -> 1 for video 2
             let v2Progress = (scrollProgress - 0.333) * 3;
             if (locationVideo && locationDuration > 0) locationVideo.currentTime = locationDuration * v2Progress;
+            
+            updateFade(content2_loc, v2Progress);
+            if(content1) content1.style.opacity = '0';
+            if(content3_gest) content3_gest.style.opacity = '0';
         }
         // Last third of scroll (0.666 to 1.0) is Video 3
         else {
@@ -132,9 +159,12 @@ function updateScrollEffects() {
             if (container2) { container2.style.opacity = 0; container2.style.pointerEvents = 'none'; }
             if (container3) { container3.style.opacity = 1; container3.style.pointerEvents = 'auto'; }
             
-            // Map 0.666 -> 1.0 to 0 -> 1 for video 3
             let v3Progress = (scrollProgress - 0.666) * 3;
             if (gestionVideo && gestionDuration > 0) gestionVideo.currentTime = gestionDuration * v3Progress;
+            
+            updateFade(content3_gest, v3Progress);
+            if(content1) content1.style.opacity = '0';
+            if(content2_loc) content2_loc.style.opacity = '0';
         }
     }
 
@@ -252,3 +282,35 @@ lenis.on('scroll', updateTextReveal);
 window.addEventListener('load', updateTextReveal);
 window.addEventListener('resize', updateTextReveal);
 updateTextReveal();
+
+// =========================================
+// Hamburger Menu Logic
+// =========================================
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const headerNav = document.querySelector('.header-nav, .xel-nav');
+    
+    if (hamburger && headerNav) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            headerNav.classList.toggle('mobile-menu-active');
+            
+            // Optionally disable lenis scrolling when menu is open
+            if (headerNav.classList.contains('mobile-menu-active')) {
+                if(window.lenis) window.lenis.stop();
+            } else {
+                if(window.lenis) window.lenis.start();
+            }
+        });
+
+        // Close menu when a link is clicked
+        const links = headerNav.querySelectorAll('a');
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                headerNav.classList.remove('mobile-menu-active');
+                if(window.lenis) window.lenis.start();
+            });
+        });
+    }
+});

@@ -357,7 +357,7 @@ section.main-scroll-section {
     border: 1px solid rgba(255, 255, 255, 0.05);
     padding: 3rem 2.5rem;
     border-radius: 20px;
-    backdrop-filter: blur(10px);
+    
     transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), background 0.5s ease;
 }
 
@@ -416,7 +416,7 @@ section.main-scroll-section {
     background: rgba(0, 0, 0, 0.5);
     padding: 3rem 5rem;
     border-radius: 16px;
-    backdrop-filter: blur(8px);
+    
     border: 1px solid rgba(255,255,255,0.1);
     text-align: center;
 }
@@ -538,7 +538,7 @@ section.main-scroll-section {
 }
 .split-image img {
     width: 100%;
-    border-radius: 4px;
+    
     box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
 
@@ -554,7 +554,7 @@ section.main-scroll-section {
 .feature-card {
     background: rgba(255,255,255,0.05);
     padding: 3rem 2rem;
-    border-radius: 4px;
+    
     border: 1px solid rgba(255,255,255,0.1);
     transition: transform 0.3s ease, background 0.3s ease;
 }
@@ -584,7 +584,7 @@ section.main-scroll-section {
 }
 .service-item {
     background: #fff;
-    border-radius: 4px;
+    
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
@@ -646,7 +646,7 @@ section.main-scroll-section {
     margin-top: 2rem;
     padding: 1.5rem;
     background: rgba(255,255,255,0.1);
-    border-left: 4px solid var(--primary);
+    
 }
 .project-details p {
     color: #fff;
@@ -831,9 +831,9 @@ section.main-scroll-section {
     bottom: 4rem;
     left: 10%;
     background: rgba(0,0,0,0.8);
-    backdrop-filter: blur(10px);
+    
     padding: 3rem;
-    border-left: 4px solid var(--primary);
+    
     color: #fff;
     max-width: 500px;
 }
@@ -998,7 +998,7 @@ section.main-scroll-section {
 }
 .strategy-card {
     text-align: center;
-    padding: 2rem;
+    padding: 0 0 2rem 2rem;
     background: rgba(255,255,255,0.03);
     border: 1px solid rgba(255,255,255,0.1);
     border-radius: 12px;
@@ -1037,7 +1037,7 @@ section.main-scroll-section {
     align-items: center;
     padding: 1.5rem 4rem;
     background: rgba(5, 5, 5, 0.8);
-    backdrop-filter: blur(20px);
+    
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     position: sticky;
     top: 0;
@@ -1143,7 +1143,7 @@ section.main-scroll-section {
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 24px;
     padding: 3.5rem;
-    backdrop-filter: blur(10px);
+    
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
@@ -1504,7 +1504,7 @@ section.main-scroll-section {
     background: rgba(255, 255, 255, 0.05);
     color: #fff;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
+    
 }
 
 .loc-btn.secondary:hover {
@@ -1515,61 +1515,111 @@ section.main-scroll-section {
 }
 
 /* =========================================
-   GLOBAL MOBILE RESPONSIVENESS (NAVBARS)
+   GLOBAL MOBILE RESPONSIVENESS & HAMBURGER
    ========================================= */
 
-@media (max-width: 992px) {
-    /* Main Navigation Bottom Bar on Mobile */
-    .header-nav {
-        top: auto;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        background: rgba(10, 10, 10, 0.95);
-        backdrop-filter: blur(10px);
-        padding: 1rem;
-        border-top: 1px solid rgba(255,255,255,0.1);
-        display: flex;
-        justify-content: center;
-        overflow-x: auto;
-        white-space: nowrap;
-    }
-    .header-nav ul {
-        justify-content: flex-start;
-        gap: 1.5rem;
-        padding: 0 1rem;
-    }
-    .header-nav ul li a {
-        font-size: 0.85rem;
-    }
+/* Hamburger Button */
+.hamburger {
+    display: none;
+    position: fixed;
+    top: 2.5rem;
+    right: 2.5rem;
+    z-index: 10000;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.4);
     
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    transform-origin: left;
+}
+
+/* Hamburger animation to X */
+.hamburger.active span:nth-child(1) { transform: rotate(45deg); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: rotate(-45deg); }
+
+@media (max-width: 992px) {
+    .hamburger {
+        display: flex; /* Show on mobile/tablet */
+    }
+
     /* Fixed Logo Adjustment */
     .fixed-logo {
-        top: 1rem;
-        left: 1rem;
-        width: 120px;
+        top: 1.5rem;
+        left: 1.5rem;
+        width: 100px;
+        z-index: 10000;
     }
-    
-    /* XEL Header for Forms (Rendez-vous / Consultation) */
-    .xel-header {
+    .xel-logo {
+        z-index: 10000;
+        position: relative;
+    }
+
+    /* Fullscreen Mobile Menu Overlay */
+    .header-nav, .xel-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(5, 5, 5, 0.98);
+        
+        display: flex;
         flex-direction: column;
-        gap: 1.5rem;
-        padding: 1.5rem;
-    }
-    .xel-nav {
-        flex-wrap: wrap;
         justify-content: center;
-        gap: 1rem;
+        align-items: center;
+        z-index: 9999;
+        transform: translateY(-100%);
+        transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        padding: 0;
+        margin: 0;
     }
     
-    /* General Typography adjustments for mobile */
-    h1 {
-        font-size: clamp(2rem, 8vw, 3.5rem);
+    .header-nav.mobile-menu-active, .xel-nav.mobile-menu-active {
+        transform: translateY(0);
     }
+    
+    .header-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    
+    .header-nav ul li a, .xel-nav a {
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+        color: #fff;
+    }
+    
+    /* XEL Header Reset */
+    .xel-header {
+        position: fixed;
+        top: 0; left: 0; width: 100%;
+        padding: 1.5rem;
+        z-index: 9998;
+    }
+
+    /* Text Resizing to prevent hiding screen */
+    h1 { font-size: clamp(2rem, 6vw, 2.5rem); line-height: 1.2; }
+    h2 { font-size: clamp(1.8rem, 5vw, 2.2rem); line-height: 1.3; }
+    .reveal-text { font-size: clamp(1.5rem, 5vw, 2rem) !important; line-height: 1.4; }
     
     .vente-hero-buttons {
-        justify-content: center;
+        flex-direction: column;
+        align-items: stretch;
     }
 }
 
@@ -1577,5 +1627,172 @@ section.main-scroll-section {
     .loc-btn {
         width: 100%;
         text-align: center;
+        padding: 1rem 1.5rem;
+    }
+}
+/* =========================================
+   SCROLL INDICATOR
+   ========================================= */
+.scroll-indicator {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    z-index: 10;
+    color: rgba(255, 255, 255, 0.7);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scroll-indicator.hidden-scroll {
+    opacity: 0 !important;
+    pointer-events: none;
+    transform: translate(-50%, 20px);
+}
+
+.scroll-text {
+    font-size: 0.7rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.scroll-arrow {
+    animation: premiumBounce 2s infinite cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@keyframes premiumBounce {
+    0% { transform: translateY(-5px); opacity: 0; }
+    30% { opacity: 1; }
+    70% { opacity: 1; }
+    100% { transform: translateY(15px); opacity: 0; }
+}
+    100% { transform: translate(-50%, 15px); opacity: 0; }
+}
+
+/* =========================================
+   CINEMA HERO TEXT (Minimalist)
+   ========================================= */
+.cinema-hero-text {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+.cinema-hero-text h1 {
+    font-size: clamp(1.5rem, 3vw, 2.5rem) !important; /* Smaller, elegant */
+    font-weight: 300 !important; /* Thin */
+    letter-spacing: 8px !important; /* Wide spacing */
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    line-height: 1.5 !important;
+    color: #fff;
+    text-shadow: 0 4px 30px rgba(0,0,0,0.9);
+}
+.cinema-hero-text p {
+    font-size: clamp(0.85rem, 1.2vw, 1rem) !important;
+    font-weight: 300 !important;
+    letter-spacing: 2px;
+    line-height: 2 !important;
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 3rem;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.cinema-hero-text .hero-buttons {
+    justify-content: center; /* Center the buttons */
+    gap: 2rem;
+}
+
+/* =========================================
+   BOTTOM LEFT HERO TEXT
+   ========================================= */
+.bottom-left-hero {
+    position: absolute;
+    bottom: 8%; /* near the bottom */
+    left: 5%; /* near the left edge */
+    z-index: 2;
+    text-align: left;
+    max-width: 35vw; /* around 1/3 or 1/4 of the screen depending on resolution */
+    min-width: 320px;
+    padding: 0 0 2rem 2rem;
+    /* removed background */ /* slight glass effect to ensure readability */
+    
+    
+    
+}
+.bottom-left-hero h1 {
+    font-size: clamp(2rem, 3vw, 3rem);
+    font-weight: 800;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    color: #fff;
+    text-transform: uppercase;
+}
+.bottom-left-hero p {
+    font-size: clamp(0.9rem, 1.1vw, 1.1rem);
+    font-weight: 400;
+    line-height: 1.6;
+    color: #f0f0f0;
+    margin-bottom: 2rem;
+}
+.bottom-left-hero .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: flex-start;
+}
+.bottom-left-hero .cta-button {
+    padding: 1rem 2rem;
+    text-align: center;
+    width: 100%;
+}
+@media (max-width: 992px) {
+    .bottom-left-hero {
+        max-width: 90%;
+        bottom: 5%;
+    }
+}
+
+
+/* =========================================
+   MOBILE HERO UN-ZOOM (Cinematic)
+   ========================================= */
+@media (max-width: 992px) {
+    .hero-video {
+        object-fit: contain !important;
+        background-color: #000;
+    }
+    .video-container {
+        background-color: #000;
+    }
+    .hero-bg, .loc-hero, .vente-hero, .gestion-hero, .project-bg {
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+        background-position: top center !important;
+        background-color: #000 !important;
+    }
+    .construction-hero, .vente-hero, .loc-hero, .gestion-hero {
+        background-color: #000 !important;
+    }
+    .bottom-left-hero {
+        bottom: 5% !important;
+        left: 5% !important;
+        max-width: 90% !important;
+        /* Add a small dark gradient behind text just in case */
+        background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+    }
+    .hero-content {
+        /* for index.html */
+        bottom: 10% !important;
+        top: auto !important;
+        transform: translateY(0) !important;
     }
 }
