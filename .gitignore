@@ -1,0 +1,5 @@
+﻿*.py
+*.txt
+.system_generated/
+scratch/
+__pycache__/
