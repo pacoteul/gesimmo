@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G.E.S Immo - Prendre Rendez-vous</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="xel-body">
+
+    <!-- Header Navigation (Simple) -->
+    <header class="xel-header">
+        <a href="index.html" class="xel-logo">
+            <img src="logo.png" alt="Logo" style="height: 40px; filter: invert(1);">
+        </a>
+        <nav class="xel-nav">
+            <a href="index.html">Accueil</a>
+            <a href="construction.html">Construction</a>
+            <a href="achat.html">Achat</a>
+            <a href="location.html">Location</a>
+            <a href="vente.html">Vente</a>
+            <a href="gestion.html">Gestion</a>
+            <a href="index.html" class="xel-nav-contact">Retour</a>
+        </nav>
+    </header>
+
+    <div class="xel-layout">
+        <div class="xel-glow"></div>
+
+        <div class="xel-container">
+            <div class="xel-eyebrow">PRENDRE RENDEZ-VOUS</div>
+            <h1 class="xel-title">Décrivez votre projet, on s'occupe du reste.</h1>
+
+            <div class="xel-form-box">
+                <form action="index.html" onsubmit="event.preventDefault(); alert('Merci ! Votre demande a été envoyée.'); window.location.href='index.html';">
+                    
+                    <div class="xel-row">
+                        <div class="xel-group">
+                            <label>Nom complet <span class="req">*</span></label>
+                            <input type="text" placeholder="Votre nom et prénom" required>
+                        </div>
+                        <div class="xel-group">
+                            <label>Email <span class="req">*</span></label>
+                            <input type="email" placeholder="contact@exemple.com" required>
+                        </div>
+                    </div>
+
+                    <div class="xel-row">
+                        <div class="xel-group">
+                            <label>Téléphone</label>
+                            <input type="tel" placeholder="+221 78 387 81 26" required>
+                        </div>
+                        <div class="xel-group">
+                            <label>Date de visite souhaitée <span class="req">*</span></label>
+                            <input type="date" required>
+                        </div>
+                    </div>
+
+                    <div class="xel-group" style="margin-bottom: 1.5rem;">
+                        <label>Objectif de la visite <span class="req">*</span></label>
+                        <select required>
+                            <option value="" disabled selected>-- Choisissez un objectif --</option>
+                            <option value="location_visite">Visite d'un bien en location</option>
+                            <option value="achat_visite">Visite d'un bien à l'achat</option>
+                            <option value="gestion">Consultation Gestion Immobilière</option>
+                            <option value="construction">Consultation Construction / Rénovation</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </div>
+
+                    <div class="xel-group">
+                        <label>Détails supplémentaires <span class="req">*</span></label>
+                        <textarea rows="4" placeholder="Décrivez votre besoin : budget estimé, quartiers préférés, délais..." required></textarea>
+                    </div>
+
+                    <div class="xel-submit-wrapper">
+                        <button type="submit" class="xel-submit">Confirmer le rendez-vous</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

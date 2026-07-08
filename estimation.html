@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G.E.S Immo - Estimation Gratuite</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+</head>
+<body class="xel-body">
+
+    <header class="xel-header">
+        <a href="index.html" class="logo">
+            <img src="logo.png" alt="Gesimmo" style="height: 40px;">
+        </a>
+        <nav class="xel-nav">
+            <a href="vente.html">Retour à la page Vente</a>
+            <a href="index.html" class="xel-nav-contact">Accueil</a>
+        </nav>
+    </header>
+
+    <div class="luxury-split-layout">
+        <!-- Left Side: Image -->
+        <div class="luxury-image-side" style="background-image: url('estimation_hero.png');">
+            <div class="luxury-overlay"></div>
+            
+            <div class="luxury-image-content">
+                <span class="luxury-eyebrow">Service Exclusif</span>
+                <h2>Connaître la valeur de son bien, c'est maîtriser son avenir.</h2>
+                <div class="luxury-separator"></div>
+                <p>Nos experts analysent le marché, les spécificités de votre bien et les transactions récentes pour vous fournir une estimation précise et rigoureuse, en toute confidentialité.</p>
+            </div>
+        </div>
+
+        <!-- Right Side: Form -->
+        <div class="luxury-form-side">
+            <div class="luxury-form-container">
+                <div class="luxury-form-header">
+                    <h1>Demande d'estimation</h1>
+                    <p>Remplissez le formulaire ci-dessous. Un conseiller G.E.S Immo vous contactera sous 24h.</p>
+                </div>
+
+                <form class="luxury-form" action="#" method="POST">
+                    
+                    <h3 style="color: #fff; margin-bottom: 1.5rem; font-weight: 300; font-size: 1.2rem; border-bottom: 1px solid #333; padding-bottom: 0.5rem;">À propos du bien</h3>
+                    
+                    <div class="luxury-form-row">
+                        <div class="luxury-input-group">
+                            <select name="type_bien" id="type_bien" required>
+                                <option value="" disabled selected></option>
+                                <option value="villa">Villa</option>
+                                <option value="appartement">Appartement</option>
+                                <option value="terrain">Terrain</option>
+                                <option value="bureau">Bureau / Commerce</option>
+                                <option value="immeuble">Immeuble</option>
+                            </select>
+                            <label for="type_bien">Type de bien *</label>
+                        </div>
+                        <div class="luxury-input-group">
+                            <select name="etat_bien" id="etat_bien" required>
+                                <option value="" disabled selected></option>
+                                <option value="neuf">Neuf</option>
+                                <option value="bon_etat">Bon état</option>
+                                <option value="a_renover">À rénover</option>
+                            </select>
+                            <label for="etat_bien">État général *</label>
+                        </div>
+                    </div>
+
+                    <div class="luxury-form-row">
+                        <div class="luxury-input-group">
+                            <input type="number" id="surface" name="surface" required>
+                            <label for="surface">Surface habitable (m²) *</label>
+                        </div>
+                        <div class="luxury-input-group">
+                            <input type="number" id="pieces" name="pieces">
+                            <label for="pieces">Nombre de pièces</label>
+                        </div>
+                    </div>
+
+                    <div class="luxury-input-group">
+                        <input type="text" id="quartier" name="quartier" required>
+                        <label for="quartier">Localisation (Quartier, Ville) *</label>
+                    </div>
+
+                    <h3 style="color: #fff; margin-top: 2.5rem; margin-bottom: 1.5rem; font-weight: 300; font-size: 1.2rem; border-bottom: 1px solid #333; padding-bottom: 0.5rem;">Vos coordonnées</h3>
+
+                    <div class="luxury-input-group">
+                        <input type="text" id="nom_proprio" name="nom_proprio" required>
+                        <label for="nom_proprio">Nom Complet *</label>
+                    </div>
+
+                    <div class="luxury-form-row">
+                        <div class="luxury-input-group">
+                            <input type="email" id="email_proprio" name="email_proprio" required>
+                            <label for="email_proprio">Adresse Email *</label>
+                        </div>
+                        <div class="luxury-input-group">
+                            <input type="tel" id="tel_proprio" name="tel_proprio" required>
+                            <label for="tel_proprio">Numéro de téléphone *</label>
+                        </div>
+                    </div>
+
+                    <div class="luxury-input-group">
+                        <textarea id="message_estimation" name="message_estimation" rows="3"></textarea>
+                        <label for="message_estimation">Informations complémentaires (jardin, piscine, travaux récents...)</label>
+                    </div>
+
+                    <button type="submit" class="luxury-submit-btn">
+                        <span>Demander mon estimation</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

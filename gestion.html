@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G.E.S Immo - Gestion</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Fixed Logo -->
+    <a href="index.html" id="logo" class="fixed-logo" aria-label="Retour à l'accueil">
+        <img src="logo.png" alt="Logo Gesimmo" style="width: 100%; height: auto; display: block;">
+    </a>
+
+    <!-- Header Navigation -->
+    <nav id="header-nav" class="header-nav">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="construction.html">Construction</a></li>
+            <li><a href="achat.html">Achat</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="vente.html">Vente</a></li>
+            <li><a href="gestion.html" class="active" style="color: var(--primary);">Gestion</a></li>
+        </ul>
+    </nav>
+
+    <!-- 1. Hero Section -->
+    <section class="gestion-hero" style="background-image: url('gestion_hero.png');">
+        <div class="gestion-hero-overlay"></div>
+        <div class="gestion-hero-content container">
+            <span class="loc-badge">La tranquillité d'esprit</span>
+            <h1>Votre patrimoine, notre expertise.<br>Votre tranquillité, notre engagement.</h1>
+            <p>De la gestion locative quotidienne à la stratégie patrimoniale long terme, nous optimisons vos actifs pour sécuriser et faire croître votre capital.</p>
+            <div class="vente-hero-buttons">
+                <a href="#operationnel" class="loc-btn primary">Demander une simulation de gestion</a>
+                <a href="rendezvous.html" class="loc-btn secondary">Discuter de votre patrimoine</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Deux leviers, une seule mission -->
+    <section class="gestion-compare-section section light">
+        <div class="container">
+            <div class="vente-why-header text-center">
+                <span class="subtitle">Maximiser vos actifs</span>
+                <h2>Une approche globale pour des résultats concrets.</h2>
+                <p style="color: #666; max-width: 800px; margin: 0 auto; font-size: 1.1rem; line-height: 1.6;">Nous distinguons deux besoins complémentaires pour nos clients : la gestion opérationnelle (le quotidien de vos biens) et la gestion patrimoniale (la vision stratégique de votre richesse).</p>
+            </div>
+            
+            <div class="gestion-compare-grid">
+                <div class="compare-card">
+                    <h3>Gestion Immobilière<br><span style="font-size: 1rem; color: #777; font-weight: 400;">(Opérationnel)</span></h3>
+                    <div class="compare-goal">
+                        <strong>Objectif :</strong> Zéro souci, revenus garantis.
+                    </div>
+                </div>
+                <div class="compare-card highlight">
+                    <h3 style="color: var(--primary);">Gestion de Patrimoine<br><span style="font-size: 1rem; color: #fff; font-weight: 400;">(Stratégique)</span></h3>
+                    <div class="compare-goal" style="color: #ddd;">
+                        <strong style="color: #fff;">Objectif :</strong> Croissance, diversification, protection.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Focus : Gestion Immobilière -->
+    <section id="operationnel" class="gestion-focus-section section" style="background: #f8f9fa;">
+        <div class="container split-container" style="align-items: center;">
+            <div class="split-text">
+                <span class="subtitle">Focus : Gestion Immobilière</span>
+                <h2>L'immobilier sans les contraintes.</h2>
+                <p style="margin-bottom: 2rem; font-size: 1.1rem; color: #555;">Ce service s'adresse aux propriétaires qui veulent les revenus sans la gestion. La gestion de biens demande du temps et de la rigueur juridique. Nous nous occupons de tout pour que votre investissement reste un plaisir :</p>
+                
+                <ul class="gestion-list">
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        <div>
+                            <strong>Sélection rigoureuse</strong>
+                            <p>Enquête de solvabilité pour choisir les meilleurs locataires.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-wrench"></i>
+                        <div>
+                            <strong>Maintenance préventive</strong>
+                            <p>Intervention rapide de nos équipes techniques pour éviter toute dégradation.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-mobile-screen"></i>
+                        <div>
+                            <strong>Reporting transparent</strong>
+                            <p>Accès à votre espace propriétaire en ligne pour suivre vos revenus et charges en temps réel.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="split-image">
+                <img src="gestion_app.png" alt="Application de gestion immobilière" style="border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Focus : Gestion de Patrimoine -->
+    <section class="gestion-focus-section section dark" style="background: #111;">
+        <div class="container">
+            <div class="vente-why-header text-center" style="margin-bottom: 4rem;">
+                <span class="subtitle" style="color: #bbb;">Focus : Gestion de Patrimoine</span>
+                <h2 style="color: #fff;">Bâtir pour demain, sécuriser pour toujours.</h2>
+                <p style="color: #ddd; max-width: 800px; margin: 0 auto; font-size: 1.1rem;">Ce service s'adresse aux investisseurs qui veulent bâtir une fortune solide. Gérer un patrimoine ne se limite pas aux murs d'un appartement. C'est comprendre les cycles du marché au Sénégal et en Afrique de l'Ouest.</p>
+            </div>
+            
+            <div class="gestion-strategy-grid">
+                <div class="strategy-card">
+                    <i class="fa-solid fa-scale-balanced" style="color: var(--primary); font-size: 2.5rem; margin-bottom: 1.5rem;"></i>
+                    <h4>Arbitrage d'actifs</h4>
+                    <p>Savoir quand vendre, quand conserver et quand réinvestir pour maximiser la rentabilité.</p>
+                </div>
+                <div class="strategy-card">
+                    <i class="fa-solid fa-layer-group" style="color: var(--primary); font-size: 2.5rem; margin-bottom: 1.5rem;"></i>
+                    <h4>Diversification</h4>
+                    <p>Ne pas mettre tous ses œufs dans le même panier immobilier. Explorer de nouveaux secteurs.</p>
+                </div>
+                <div class="strategy-card">
+                    <i class="fa-solid fa-chess-knight" style="color: var(--primary); font-size: 2.5rem; margin-bottom: 1.5rem;"></i>
+                    <h4>Vision long terme</h4>
+                    <p>Préparer la transmission de votre patrimoine et protéger vos intérêts face aux évolutions du marché.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Pourquoi nous choisir -->
+    <section class="vente-why-section section light">
+        <div class="container">
+            <div class="vente-why-header text-center">
+                <span class="subtitle">La preuve de votre sérieux</span>
+                <h2>Pourquoi nous choisir comme gestionnaire ?</h2>
+            </div>
+            
+            <div class="vente-features-grid">
+                <div class="vente-feature-card">
+                    <div class="vente-icon"><i class="fa-solid fa-bolt"></i></div>
+                    <h3>Réactivité locale</h3>
+                    <p>Une équipe sur place à Dakar, capable d'intervenir en un temps record pour régler les problèmes.</p>
+                </div>
+                <div class="vente-feature-card">
+                    <div class="vente-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                    <h3>Transparence totale</h3>
+                    <p>Aucun frais caché, une comptabilité claire et des rapports mensuels détaillés accessibles en ligne.</p>
+                </div>
+                <div class="vente-feature-card">
+                    <div class="vente-icon"><i class="fa-solid fa-helmet-safety"></i></div>
+                    <h3>Expertise métier</h3>
+                    <p>Étant aussi constructeurs, nous connaissons le bâtiment par cœur. Nous savons entretenir et valoriser techniquement vos biens.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Footer CTA -->
+    <section class="vente-footer-cta section dark" style="background: var(--bg-dark); padding: 8rem 2rem;">
+        <div class="container text-center">
+            <h2 style="color: #fff; margin-bottom: 1.5rem; border: none;">Prêt à optimiser vos actifs ?</h2>
+            <p style="color: #e0e0e0; font-size: 1.2rem; max-width: 800px; margin: 0 auto 3rem;">Ne laissez plus votre patrimoine au hasard. Que vous ayez un seul bien ou un portefeuille complexe, rencontrons-nous pour définir votre stratégie de gestion.</p>
+            <div class="vente-hero-buttons" style="justify-content: center;">
+                <a href="rendezvous.html" class="loc-btn primary">Réserver un audit patrimonial gratuit</a>
+                <a href="tel:+221770000000" class="loc-btn secondary"><i class="fa-solid fa-phone"></i> Contacter notre service de gestion</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+        // Inverse header on scroll
+        window.addEventListener('scroll', () => {
+            const headerNav = document.getElementById('header-nav');
+            if (window.scrollY > 50) {
+                headerNav.classList.add('invert');
+            } else {
+                headerNav.classList.remove('invert');
+            }
+        });
+    </script>
+</body>
+</html>

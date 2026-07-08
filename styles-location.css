@@ -1,0 +1,287 @@
+
+/* =========================================
+   Location Page Specific Styles
+   ========================================= */
+
+/* Hero */
+.loc-hero {
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+.loc-hero-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 100%);
+    z-index: 1;
+}
+.loc-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding-left: 2rem;
+}
+.loc-badge {
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 30px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(5px);
+}
+.loc-hero-content h1 {
+    font-size: clamp(3rem, 5vw, 5rem);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+}
+.loc-hero-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #ddd;
+    margin-bottom: 3rem;
+}
+.loc-hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.loc-btn {
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-size: 0.95rem;
+}
+.loc-btn.primary {
+    background: var(--primary);
+    color: #000;
+}
+.loc-btn.primary:hover {
+    background: #fff;
+}
+.loc-btn.secondary {
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+}
+.loc-btn.secondary:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* Why Section */
+.loc-why-section {
+    padding: 6rem 2rem;
+    background: #111;
+}
+.loc-why-header {
+    max-width: 800px;
+    margin: 0 auto 4rem auto;
+}
+.loc-why-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+.loc-why-header p {
+    font-size: 1.1rem;
+    color: #aaa;
+    line-height: 1.6;
+}
+.loc-features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+}
+.loc-feature {
+    background: #1a1a1a;
+    padding: 3rem;
+    border-radius: 12px;
+    border: 1px solid #222;
+    transition: transform 0.3s;
+}
+.loc-feature:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+}
+.loc-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+.loc-feature h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    line-height: 1.4;
+}
+.loc-feature p {
+    color: #888;
+    line-height: 1.6;
+}
+
+/* Spaces */
+.loc-spaces-section {
+    padding: 6rem 2rem;
+    background: #0a0a0a;
+}
+.loc-space-item {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 6rem;
+}
+.loc-space-item.reverse {
+    flex-direction: row-reverse;
+}
+.loc-space-img {
+    flex: 1;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+.loc-space-info {
+    flex: 1;
+}
+.loc-tag {
+    display: inline-block;
+    width: 40px; height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: var(--primary);
+    color: #000;
+    font-weight: 800;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+}
+.loc-space-info h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+.loc-space-info p {
+    font-size: 1.2rem;
+    color: #bbb;
+    line-height: 1.6;
+}
+
+/* Process Section */
+.loc-process-section {
+    padding: 6rem 2rem;
+    background: #111;
+}
+.loc-process-wrapper {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+}
+.loc-process-text {
+    flex: 1;
+}
+.loc-process-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+.process-step {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.step-num {
+    width: 50px; height: 50px;
+    flex-shrink: 0;
+    background: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+.step-content h4 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+.step-content p {
+    color: #aaa;
+    line-height: 1.5;
+}
+.loc-process-image {
+    flex: 1;
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+}
+
+/* Footer CTA */
+.loc-cta-footer {
+    padding: 8rem 2rem;
+    background: linear-gradient(135deg, #111 0%, #000 100%);
+    border-top: 1px solid #333;
+}
+.loc-cta-footer h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+.loc-cta-footer p {
+    font-size: 1.2rem;
+    color: #888;
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+    line-height: 1.6;
+}
+.loc-cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.loc-btn.primary-dark {
+    background: #333;
+    color: #fff;
+}
+.loc-btn.primary-dark:hover {
+    background: var(--primary);
+    color: #000;
+}
+.loc-btn.whatsapp-btn {
+    background: #25D366;
+    color: #fff;
+}
+.loc-btn.whatsapp-btn:hover {
+    background: #128C7E;
+}
+
+@media (max-width: 992px) {
+    .loc-space-item, .loc-space-item.reverse {
+        flex-direction: column;
+    }
+    .loc-space-img {
+        width: 100%;
+        height: 300px;
+    }
+    .loc-process-wrapper {
+        flex-direction: column;
+    }
+    .loc-process-image {
+        width: 100%;
+        height: 400px;
+        order: -1;
+    }
+}

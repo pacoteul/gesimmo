@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gesimmo - Location</title>
+    <meta name="description" content="Découvrez une sélection exclusive de biens locatifs (appartements et villas) à Dakar. Emménagez en toute confiance avec G.E.S Immo.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-location.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+</head>
+<body class="bg-dark text-white">
+
+    <!-- Fixed Logo -->
+    <a href="index.html" id="logo" class="fixed-logo" aria-label="Retour à l'accueil">
+        <img src="logo.png" alt="Logo Gesimmo" style="width: 100%; height: auto; display: block; filter: invert(1);">
+    </a>
+
+    <!-- Header Navigation -->
+    <nav id="header-nav" class="header-nav">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="construction.html">Construction</a></li>
+            <li><a href="achat.html">Achat</a></li>
+            <li><a href="location.html" class="active" style="color: var(--primary);">Location</a></li>
+            <li><a href="vente.html">Vente</a></li>
+            <li><a href="gestion.html">Gestion</a></li>
+        </ul>
+    </nav>
+
+    <!-- 1. Hero Section -->
+    <section class="loc-hero" style="background-image: url('loc_hero.png');">
+        <div class="loc-hero-overlay"></div>
+        <div class="loc-hero-content container">
+            <span class="loc-badge">L'accès rapide à la qualité</span>
+            <h1>Votre prochain chez-vous, sans compromis.</h1>
+            <p>Découvrez une sélection exclusive de biens locatifs (appartements et villas) alliant confort moderne, sécurité et emplacement de choix à Dakar. Emménagez en toute confiance.</p>
+            <div class="loc-hero-buttons">
+                <a href="#catalogue" class="loc-btn primary">Voir les disponibilités</a>
+                <a href="rendezvous.html" class="loc-btn secondary">Prendre rendez-vous pour une visite</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Pourquoi choisir nos locations ? -->
+    <section class="loc-why-section">
+        <div class="container">
+            <div class="loc-why-header text-center">
+                <h2>Louer avec nous, c'est choisir la tranquillité.</h2>
+                <p>Nous savons qu'une location est souvent une étape importante. Notre rôle est de vous garantir un environnement où vous n'avez qu'à poser vos valises.</p>
+            </div>
+            
+            <div class="loc-features-grid">
+                <div class="loc-feature">
+                    <div class="loc-icon">🔧</div>
+                    <h3>Zéro Soucis<br><span style="font-size: 0.9em; font-weight: 400; color: #aaa;">Entretien assuré</span></h3>
+                    <p>Nos équipes veillent à ce que chaque installation (plomberie, électricité, climatisation) fonctionne parfaitement.</p>
+                </div>
+                <div class="loc-feature">
+                    <div class="loc-icon">📄</div>
+                    <h3>Transparence<br><span style="font-size: 0.9em; font-weight: 400; color: #aaa;">Pas de mauvaises surprises</span></h3>
+                    <p>Des contrats clairs, des charges explicitées et aucune confusion sur les frais.</p>
+                </div>
+                <div class="loc-feature">
+                    <div class="loc-icon">📞</div>
+                    <h3>Réactivité<br><span style="font-size: 0.9em; font-weight: 400; color: #aaa;">Support dédié</span></h3>
+                    <p>Un problème ? Une question ? Notre service de conciergerie locative répond présent rapidement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Nos Espaces Disponibles -->
+    <section id="catalogue" class="loc-spaces-section">
+        <div class="container">
+            <h2 class="section-title text-center" style="margin-bottom: 4rem; font-size: 3rem;">Nos Espaces Disponibles</h2>
+            
+            <!-- Appartements -->
+            <div class="loc-space-item">
+                <div class="loc-space-img" style="background-image: url('loc_appart.png');"></div>
+                <div class="loc-space-info">
+                    <span class="loc-tag">1</span>
+                    <h3>Appartements "Citadins"</h3>
+                    <p>Idéal pour les jeunes professionnels ou les couples. Proximité, sécurité et optimisation de l'espace.</p>
+                </div>
+            </div>
+
+            <!-- Villas -->
+            <div class="loc-space-item reverse">
+                <div class="loc-space-img" style="background-image: url('loc_villa.png');"></div>
+                <div class="loc-space-info">
+                    <span class="loc-tag">2</span>
+                    <h3>Villas Familiales</h3>
+                    <p>De l'espace, un jardin, de la sécurité. Le cadre parfait pour la sérénité de votre famille.</p>
+                </div>
+            </div>
+
+            <!-- Bureaux -->
+            <div class="loc-space-item">
+                <div class="loc-space-img" style="background-image: url('loc_bureau.png');"></div>
+                <div class="loc-space-info">
+                    <span class="loc-tag">3</span>
+                    <h3>Espaces Professionnels (Bureaux)</h3>
+                    <p>Des locaux adaptés à la croissance de votre entreprise, modernes et bien situés.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Le Parcours de Location -->
+    <section class="loc-process-section">
+        <div class="container">
+            <div class="loc-process-wrapper">
+                <div class="loc-process-text">
+                    <h2>Le Parcours de Location (Simplifié)</h2>
+                    
+                    <div class="process-step">
+                        <div class="step-num">1</div>
+                        <div class="step-content">
+                            <h4>Sélectionnez</h4>
+                            <p>Filtrez nos annonces par budget, quartier et type de bien sur notre catalogue en ligne.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-num">2</div>
+                        <div class="step-content">
+                            <h4>Visitez</h4>
+                            <p>Réservez votre créneau de visite en un clic. Nos agents vous font découvrir les lieux.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-num">3</div>
+                        <div class="step-content">
+                            <h4>Installez-vous</h4>
+                            <p>Signature électronique, état des lieux digital et remise des clés. Simple, propre, efficace.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="loc-process-image" style="background-image: url('loc_remise_cles.png');"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Call to action final (Le "Footer CTA") -->
+    <section class="loc-cta-footer">
+        <div class="container text-center">
+            <h2>Vous cherchez la perle rare ?</h2>
+            <p>Les biens de qualité se louent vite. Ne laissez pas passer votre futur chez-vous. Inscrivez-vous à nos alertes prioritaires pour être informé en avant-première des nouvelles disponibilités.</p>
+            <div class="loc-cta-buttons">
+                <a href="#catalogue" class="loc-btn primary-dark">Voir toutes les annonces</a>
+                <a href="https://wa.me/221000000000" target="_blank" class="loc-btn whatsapp-btn">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" style="margin-right: 8px; vertical-align: middle;">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.489-1.761-1.663-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.885m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+                    </svg>
+                    Recevoir les nouveautés
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="section dark footer-section">
+        <div class="container text-center">
+            <p>&copy; 2026 G.E.S Immo. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Init Lenis -->
+    <script>
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            smooth: true
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        // Header shrinking
+        const headerNav = document.getElementById('header-nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                headerNav.classList.add('scrolled');
+            } else {
+                headerNav.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

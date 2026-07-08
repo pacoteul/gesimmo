@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G.E.S Immo - Vente</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Fixed Logo -->
+    <a href="index.html" id="logo" class="fixed-logo" aria-label="Retour à l'accueil">
+        <img src="logo.png" alt="Logo Gesimmo" style="width: 100%; height: auto; display: block;">
+    </a>
+
+    <!-- Header Navigation -->
+    <nav id="header-nav" class="header-nav">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="construction.html">Construction</a></li>
+            <li><a href="achat.html">Achat</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="vente.html" class="active" style="color: var(--primary);">Vente</a></li>
+            <li><a href="gestion.html">Gestion</a></li>
+        </ul>
+    </nav>
+
+    <!-- 1. Hero Section -->
+    <section class="vente-hero" style="background-image: url('vente_hero.png');">
+        <div class="vente-hero-overlay"></div>
+        <div class="vente-hero-content container">
+            <span class="loc-badge">Confiance et Rentabilité</span>
+            <h1>Vendre votre bien au juste prix, en toute sérénité.</h1>
+            <p>Plus de 10 ans d'expertise au Sénégal et en Afrique de l'Ouest. Nous transformons votre propriété en une transaction réussie grâce à une stratégie de vente sur-mesure.</p>
+            <div class="vente-hero-buttons">
+                <a href="estimation.html" class="loc-btn primary">Estimer mon bien gratuitement</a>
+                <a href="rendezvous.html" class="loc-btn secondary">Nous confier votre vente</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Pourquoi nous confier votre vente ? -->
+    <section class="vente-why-section section light">
+        <div class="container">
+            <div class="vente-why-header text-center">
+                <span class="subtitle">Pourquoi nous confier votre vente ?</span>
+                <h2>L'art de valoriser votre patrimoine</h2>
+                <p style="color: #666; max-width: 800px; margin: 0 auto; font-size: 1.1rem; line-height: 1.6;">Vendre un bien ne se résume pas à mettre une annonce. C'est une stratégie de mise en valeur, de ciblage d'acheteurs qualifiés et de rigueur juridique.</p>
+            </div>
+            
+            <div class="vente-features-grid">
+                <div class="vente-feature-card">
+                    <div class="vente-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3>Expertise d'Estimation</h3>
+                    <p>Nous analysons le marché local pour fixer le prix qui attire l'acheteur sans brader votre bien. Une valeur réelle et juste.</p>
+                </div>
+                <div class="vente-feature-card">
+                    <div class="vente-icon"><i class="fa-solid fa-camera"></i></div>
+                    <h3>Marketing de Prestige</h3>
+                    <p>Visibilité maximale : Photos professionnelles, vidéos, et mise en avant sur nos réseaux et plateformes spécialisées.</p>
+                </div>
+                <div class="vente-feature-card">
+                    <div class="vente-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3>Sécurité Totale</h3>
+                    <p>Transaction sécurisée : Nous gérons la vérification des dossiers, les compromis et accompagnons jusqu'à la signature finale.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Notre Processus de Vente (Infographie HTML/CSS) -->
+    <section class="vente-process-section section dark">
+        <div class="container">
+            <div class="vente-process-header text-center" style="margin-bottom: 5rem;">
+                <span class="subtitle" style="color: #bbb;">La Clarté</span>
+                <h2 style="color: #fff;">Notre Processus de Vente</h2>
+                <p style="color: #ddd; max-width: 800px; margin: 0 auto;">Restez aux commandes tout en étant épaulé à chaque étape par nos experts.</p>
+            </div>
+            
+            <div class="vente-process-steps">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h4>Estimation Gratuite</h4>
+                        <p>Analyse technique et comparative de votre bien (Villa, Appartement, Terrain).</p>
+                    </div>
+                </div>
+                <div class="process-connector"></div>
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h4>Stratégie de Vente</h4>
+                        <p>Définition du profil d'acheteur idéal et mise en place de la communication ciblée.</p>
+                    </div>
+                </div>
+                <div class="process-connector"></div>
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h4>Gestion des Visites</h4>
+                        <p>Nous filtrons les acquéreurs pour ne vous présenter que des profils sérieux et solvables.</p>
+                    </div>
+                </div>
+                <div class="process-connector"></div>
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h4>Closing</h4>
+                        <p>Accompagnement complet jusqu'à la remise des clés et le transfert de propriété.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- L'aspect Technique (Image) -->
+    <section class="vente-tech-section">
+        <div class="tech-image-container">
+            <img src="vente_tech.png" alt="Rigueur et professionnalisme" class="tech-image">
+            <div class="tech-overlay-text">
+                <h3>Une rigueur juridique infaillible</h3>
+                <p>Vos contrats, nos garanties.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Ce que nous vendons -->
+    <section class="vente-expertise-section section light" style="background: #f8f9fa;">
+        <div class="container">
+            <div class="vente-why-header text-center">
+                <span class="subtitle">Votre expertise</span>
+                <h2>Une demande forte pour vos actifs</h2>
+                <p style="color: #666; max-width: 800px; margin: 0 auto; font-size: 1.1rem;">Notre réseau et notre positionnement nous permettent de trouver des acquéreurs rapidement pour :</p>
+            </div>
+            
+            <div class="vente-expertise-grid">
+                <div class="expertise-item">
+                    <h4>Villas & Résidences</h4>
+                    <p>Biens d'exception et maisons familiales.</p>
+                </div>
+                <div class="expertise-item">
+                    <h4>Appartements</h4>
+                    <p>Studios, F3, F4 ou penthouses en zones urbaines.</p>
+                </div>
+                <div class="expertise-item">
+                    <h4>Terrains & Bureaux</h4>
+                    <p>Opportunités foncières pour investisseurs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Footer CTA -->
+    <section class="vente-footer-cta section dark" style="background: var(--bg-dark); padding: 8rem 2rem;">
+        <div class="container text-center">
+            <h2 style="color: #fff; margin-bottom: 1.5rem; border: none;">Prêt à passer à l'étape suivante ?</h2>
+            <p style="color: #e0e0e0; font-size: 1.2rem; max-width: 800px; margin: 0 auto 3rem;">Votre propriété mérite la meilleure visibilité et un accompagnement professionnel pour maximiser votre retour sur investissement. Parlons de votre projet dès aujourd'hui.</p>
+            <div class="vente-hero-buttons" style="justify-content: center;">
+                <a href="estimation.html" class="loc-btn primary">Demander une estimation gratuite</a>
+                <a href="tel:+221770000000" class="loc-btn secondary"><i class="fa-solid fa-phone"></i> Appelez nos experts</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

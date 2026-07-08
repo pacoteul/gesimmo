@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gesimmo Construction</title>
+    <meta name="description" content="L'excellence dans la construction, du concept à la réalité. Découvrez nos services et projets.">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+</head>
+<body>
+    <!-- Fixed Logo -->
+    <a href="#" id="logo" class="fixed-logo" onclick="lenis.scrollTo(0, {duration: 1.5}); return false;" aria-label="Retour à l'accueil">
+        <img src="logo.png" alt="Logo Gesimmo" style="width: 100%; height: auto; display: block;">
+    </a>
+
+    <!-- Header Navigation -->
+    <nav id="header-nav" class="header-nav">
+        <ul>
+            <li><a href="index.html" class="active" style="color: var(--primary);">Accueil</a></li>
+            <li><a href="construction.html">Construction</a></li>
+            <li><a href="achat.html">Achat</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="vente.html">Vente</a></li>
+            <li><a href="gestion.html">Gestion</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Pinned Section for seamless video transition -->
+    <section id="main-scroll" class="main-scroll-section section dark">
+        <!-- Anchors for Navigation -->
+        <div id="anchor-construction" style="position: absolute; top: 0; left: 0;"></div>
+        <div id="anchor-achat-vente-location" style="position: absolute; top: 400vh; left: 0;"></div>
+        <div id="anchor-gestion" style="position: absolute; top: 800vh; left: 0;"></div>
+        
+        <div class="sticky-container">
+            
+            <!-- Video 1 : Hero -->
+            <div class="video-container" id="video-container-1">
+                <video muted playsinline preload="auto" class="hero-video" id="hero-video">
+                    <source src="construction.mp4" type="video/mp4">
+                </video>
+                <div class="hero-overlay"></div>
+                <div class="hero-content" id="hero-content-1">
+                    <h1>Construire l'avenir<br>avec <span style="color: var(--primary)">G.E.S Immo</span></h1>
+                    <p>L'excellence dans la construction, du concept à la réalité.</p>
+                    <a href="#services" class="cta-button" onclick="lenis.scrollTo('#services')">Découvrir</a>
+                </div>
+                <div class="hero-content-2" id="hero-content-2">
+                    <h2>L'excellence structurelle sublimée par une esthétique d'exception.</h2>
+                    <p>Votre vision prend vie avec une solidité absolue et des finitions parfaites.</p>
+                </div>
+            </div>
+
+            <!-- Video 2 : Location -->
+            <div class="video-container" id="video-container-2" style="opacity: 0; pointer-events: none;">
+                <video muted playsinline preload="auto" class="hero-video" id="location-video">
+                    <source src="location.mp4" type="video/mp4">
+                </video>
+                <div class="hero-overlay"></div>
+                <div class="hero-content" id="location-content-1">
+                    <h2 style="font-size: clamp(3rem, 5vw, 5rem); color: #fff; text-transform: uppercase; margin-bottom: 1rem;">Achat, Vente, Location</h2>
+                    <p style="font-size: clamp(1.2rem, 2vw, 1.8rem); color: #e0e0e0; font-weight: 300;">L'expertise immobilière pour vous accompagner dans tous vos projets.</p>
+                </div>
+            </div>
+
+            <!-- Video 3 : Gestion -->
+            <div class="video-container" id="video-container-3" style="opacity: 0; pointer-events: none;">
+                <video muted playsinline preload="auto" class="hero-video" id="gestion-video">
+                    <source src="gestion.mp4" type="video/mp4">
+                </video>
+                <div class="hero-overlay"></div>
+                <div class="hero-content" id="gestion-content-1">
+                    <h2 style="font-size: clamp(3rem, 5vw, 5rem); color: #fff; text-transform: uppercase; margin-bottom: 1rem;">Gestion de Patrimoine</h2>
+                    <p style="font-size: clamp(1.2rem, 2vw, 1.8rem); color: #e0e0e0; font-weight: 300;">Notre expertise pour un pilotage rigoureux de votre projet, de la conception à la livraison.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Text Reveal Section -->
+    <section class="text-reveal-section section light" id="philosophy">
+        <div class="container" style="max-width: 1200px;">
+            <h2 class="reveal-text">
+                Nous concevons des espaces de vie innovants, alliant durabilité et design architectural exceptionnel. L'excellence est notre standard absolu pour construire l'avenir.
+            </h2>
+        </div>
+    </section>
+
+    <!-- Services Section (Dark background) -->
+    <section id="services" class="section dark">
+        <div class="container">
+            <h2>Nos Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon">🏗️</div>
+                    <h3>Gros Œuvre</h3>
+                    <p>Fondations solides et structures robustes pour tous types de bâtiments, industriels ou résidentiels.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">🔨</div>
+                    <h3>Rénovation</h3>
+                    <p>Redonner vie aux espaces existants avec des matériaux modernes tout en respectant l'âme des lieux.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">📐</div>
+                    <h3>Aménagement</h3>
+                    <p>Création d'espaces de vie harmonieux et fonctionnels, taillés sur mesure pour vos besoins.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Text Section -->
+    <section class="section light" style="padding: 4rem 2rem 1rem 2rem; text-align: center;">
+        <div class="container">
+            <h2 style="font-size: clamp(2.5rem, 5vw, 4rem); margin: 0; text-transform: uppercase; font-weight: 800; letter-spacing: -1px;">Une Vision Innovante</h2>
+        </div>
+    </section>
+
+    <!-- Image / Parallax Section (Dark background context for logo) -->
+    <section class="image-section section dark">
+        <div class="parallax-bg" style="background-image: url('photo_2026-07-07_14-05-45.jpg');"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="section dark footer-section">
+        <div class="container">
+            <p>&copy; 2026 Gesimmo Construction. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

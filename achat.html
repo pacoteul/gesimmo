@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G.E.S Immo - Achat</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+</head>
+<body>
+    <!-- Fixed Logo -->
+    <a href="index.html" id="logo" class="fixed-logo" aria-label="Retour à l'accueil">
+        <img src="logo.png" alt="Logo Gesimmo" style="width: 100%; height: auto; display: block;">
+    </a>
+
+    <!-- Header Navigation -->
+    <nav id="header-nav" class="header-nav">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="construction.html">Construction</a></li>
+            <li><a href="achat.html" class="active" style="color: var(--primary);">Achat</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="vente.html">Vente</a></li>
+            <li><a href="gestion.html">Gestion</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="construction-hero section dark">
+        <div class="hero-bg" style="background-image: url('hero_achat.png');"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content-center">
+            <h1>Habitez l'exception.<br>Investissez dans la sérénité.</h1>
+            <p>Plus qu'une adresse, un patrimoine. Découvrez notre sélection exclusive de villas de prestige et d'appartements de haut standing au Sénégal et en Afrique de l'Ouest.</p>
+            <div class="hero-buttons">
+                <button class="cta-button">Voir nos biens disponibles</button>
+                <button class="cta-button secondary">Recevoir la brochure</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pourquoi acheter avec nous -->
+    <section class="section light features-section">
+        <div class="container">
+            <span class="subtitle">La confiance est le pilier central de l'immobilier</span>
+            <h2 style="margin-bottom: 2rem;">L'excellence au cœur de votre projet immobilier</h2>
+            <p style="font-size: 1.1rem; color: #555; max-width: 800px; margin-bottom: 4rem;">Avec 10 ans d'expertise dans le développement et la gestion immobilière, nous comprenons que l'achat d'un bien est l'une des décisions les plus importantes de votre vie. Notre mission est de vous simplifier ce parcours.</p>
+            
+            <div class="features-grid">
+                <div class="feature-card" style="border-color: rgba(0,0,0,0.1); background: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                    <h3 style="color: var(--primary);">Biens choisis</h3>
+                    <p style="color: #666;">Nous ne listons que ce que nous aurions aimé habiter nous-mêmes. Qualité architecturale garantie.</p>
+                </div>
+                <div class="feature-card" style="border-color: rgba(0,0,0,0.1); background: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                    <h3 style="color: var(--primary);">Sécurité Totale (Zéro Risque)</h3>
+                    <p style="color: #666;">Transparence juridique totale. Titres fonciers vérifiés et conformité assurée.</p>
+                </div>
+                <div class="feature-card" style="border-color: rgba(0,0,0,0.1); background: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                    <h3 style="color: var(--primary);">Accompagnement A-Z (Sérénité)</h3>
+                    <p style="color: #666;">De la visite à la remise des clés, notre équipe gère tout pour vous éviter les soucis administratifs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nos Segments Immobiliers -->
+    <section class="section dark services-showcase" style="background: var(--bg-dark);">
+        <div class="container">
+            <h2 class="text-center" style="margin-bottom: 4rem; color: #fff;">Nos Segments Immobiliers</h2>
+            <div class="services-grid">
+                <div class="service-item" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
+                    <div class="service-image">
+                        <img src="achat_villa.png" alt="Villas d'Exception">
+                    </div>
+                    <div class="service-text">
+                        <h3 style="color: #fff;">1. Villas d'Exception</h3>
+                        <p style="color: #ccc;">L'intimité, l'espace et le luxe. Des résidences conçues pour la famille et l'épanouissement.</p>
+                    </div>
+                </div>
+                <div class="service-item" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
+                    <div class="service-image">
+                        <img src="achat_appartement.png" alt="Appartements Urbains">
+                    </div>
+                    <div class="service-text">
+                        <h3 style="color: #fff;">2. Appartements Urbains</h3>
+                        <p style="color: #ccc;">Le confort moderne au cœur de la ville. Optimisation de l'espace, finitions haut de gamme et services intégrés.</p>
+                    </div>
+                </div>
+                <div class="service-item" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
+                    <div class="service-image">
+                        <img src="achat_investissement.png" alt="Opportunités d'Investissement">
+                    </div>
+                    <div class="service-text">
+                        <h3 style="color: #fff;">3. Opportunités d'Investissement</h3>
+                        <p style="color: #ccc;">Des actifs immobiliers à fort rendement locatif, idéalement situés pour valoriser votre capital.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Le Parcours d'Acquisition (Transparence) -->
+    <section class="section light split-section">
+        <div class="container split-container">
+            <div class="split-image">
+                <img src="achat_handshake.png" alt="Remise des clés">
+            </div>
+            <div class="split-text">
+                <span class="subtitle">Transparence</span>
+                <h2>Le Parcours d'Acquisition</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h4>Exploration</h4>
+                        <p>Parcourez nos biens en ligne avec nos visites virtuelles immersives.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Accompagnement</h4>
+                        <p>Un conseiller dédié vous accompagne pour une visite physique et l'analyse technique.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Finalisation</h4>
+                        <p>Gestion sécurisée du processus d'achat et transfert de propriété en toute sérénité.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vivre le Quartier -->
+    <section class="section light split-section" style="padding-top: 0;">
+        <div class="container split-container">
+            <div class="split-text">
+                <span class="subtitle">Vivre le Quartier</span>
+                <h2>Plus qu'un toit, un emplacement de choix.</h2>
+                <p>Nos propriétés sont situées dans les zones les plus dynamiques et sécurisées. Accès aux commerces, écoles internationales, et infrastructures de loisirs : tout est pensé pour faciliter votre quotidien.</p>
+            </div>
+            <div class="split-image">
+                <img src="achat_neighborhood.png" alt="Vie de quartier">
+            </div>
+        </div>
+    </section>
+
+    <!-- Appel à l'action final (Footer CTA) -->
+    <section class="section dark footer-cta" style="padding: 12rem 2rem; background: var(--bg-dark);">
+        <div class="container text-center">
+            <h2 style="color: #fff; margin-bottom: 1.5rem; border: none;">Votre futur chez-vous est ici.</h2>
+            <p style="color: #e0e0e0; font-size: 1.2rem; max-width: 700px; margin: 0 auto 3rem;">Vous cherchez une résidence principale ou un investissement rentable ? Nos opportunités partent vite. Ne manquez pas votre chance.</p>
+            <div class="hero-buttons" style="justify-content: center;">
+                <a href="rendezvous.html" class="cta-button" style="text-decoration: none; display: inline-block;">Prendre rendez-vous avec un conseiller</a>
+                <button class="cta-button secondary">S'inscrire à notre newsletter</button>
+            </div>
+        </div>
+    </section>
+
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
