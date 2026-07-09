@@ -22,7 +22,7 @@ const lenis = new Lenis({
     gestureDirection: 'vertical',
     smooth: true,
     mouseMultiplier: 1,
-    smoothTouch: true,
+    smoothTouch: false,
     touchMultiplier: 1.5,
     infinite: false,
 });
