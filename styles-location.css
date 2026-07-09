@@ -314,6 +314,11 @@
         /* Add a small dark gradient behind text just in case */
         background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
     }
+    /* Restore full brightness to images on mobile by hiding the dark overlay */
+    .hero-overlay, .loc-hero-overlay, .vente-hero-overlay, .gestion-hero-overlay {
+        display: none !important;
+    }
+
     .hero-content {
         /* for index.html */
         bottom: 10% !important;
