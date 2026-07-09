@@ -221,6 +221,10 @@ section.main-scroll-section {
     animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.5s;
 }
 
+.hero-content h1, .hero-content h2, .hero-content p {
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.5);
+}
+
 .hero-content p {
     font-size: clamp(1.2rem, 2vw, 1.8rem);
     font-weight: 300;
