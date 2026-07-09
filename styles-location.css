@@ -275,6 +275,7 @@
     .loc-space-img {
         width: 100%;
         height: 300px;
+        flex: none !important;
     }
     .loc-process-wrapper {
         flex-direction: column;
@@ -283,6 +284,7 @@
         width: 100%;
         height: 400px;
         order: -1;
+        flex: none !important;
     }
 }
 
