@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gesimmo Construction</title>
     <meta name="description" content="L'excellence dans la construction, du concept à la réalité. Découvrez nos services et projets.">
-    <link rel="stylesheet" href="styles.css?v=6">
+    <link rel="stylesheet" href="styles.css?v=7">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -78,8 +78,18 @@
             <!-- Video 2 : Location -->
             <div class="video-container" id="video-container-2" style="opacity: 0; pointer-events: none;">
                 <video muted playsinline preload="auto" class="hero-video" id="location-video">
-                    <source src="location.mp4" type="video/mp4">
-                </video>
+                  </video>
+                  <script>
+                      (function() {
+                          var v = document.getElementById('location-video');
+                          if (window.innerWidth <= 992) {
+                              v.src = 'location10.mp4';
+                          } else {
+                              v.src = 'location.mp4';
+                          }
+                          v.load();
+                      })();
+                  </script>
                 <div class="hero-overlay"></div>
                 <div class="hero-content" id="location-content-1">
                     <h2 style="font-size: clamp(3rem, 5vw, 5rem); color: #fff; text-transform: uppercase; margin-bottom: 1rem;">Achat, Vente, Location</h2>
