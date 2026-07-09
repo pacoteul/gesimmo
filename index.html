@@ -56,8 +56,10 @@
                           var v = document.getElementById('hero-video');
                           if (window.innerWidth <= 992) {
                               v.src = 'construction10.mp4';
+                              v.load();
                           } else {
                               v.src = 'construction.mp4';
+                              v.load();
                           }
                       })();
                   </script>
