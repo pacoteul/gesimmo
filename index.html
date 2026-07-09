@@ -50,9 +50,17 @@
             <!-- Video 1 : Hero -->
             <div class="video-container" id="video-container-1">
                 <video muted playsinline preload="auto" class="hero-video" id="hero-video">
-                    <source src="construction10.mp4" type="video/mp4" media="(max-width: 992px)">
-                      <source src="construction.mp4" type="video/mp4">
-                </video>
+                  </video>
+                  <script>
+                      (function() {
+                          var v = document.getElementById('hero-video');
+                          if (window.innerWidth <= 992) {
+                              v.src = 'construction10.mp4';
+                          } else {
+                              v.src = 'construction.mp4';
+                          }
+                      })();
+                  </script>
                 <div class="hero-overlay"></div>
                 <div class="hero-content" id="hero-content-1">
                     <h1>Construire l'avenir<br>avec <span style="color: var(--primary)">G.E.S Immo</span></h1>
