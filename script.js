@@ -314,3 +314,31 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// Portfolio Slider Logic
+const sliderState = {};
+
+function moveSlider(trackId, direction) {
+    const track = document.getElementById(trackId);
+    if (!track) return;
+    
+    if (!sliderState[trackId]) {
+        sliderState[trackId] = 0;
+    }
+    
+    const numImages = track.querySelectorAll('img').length;
+    sliderState[trackId] += direction;
+    
+    // Wrap around
+    if (sliderState[trackId] >= numImages) {
+        sliderState[trackId] = 0;
+    } else if (sliderState[trackId] < 0) {
+        sliderState[trackId] = numImages - 1;
+    }
+    
+    const offset = -(sliderState[trackId] * 100);
+    track.style.transform = `translateX(${offset}%)`;
+}
+
+// Make globally available
+window.moveSlider = moveSlider;
