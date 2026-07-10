@@ -3,23 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gesimmo - Location</title>
+    <title>G.E.S Immo - Achat</title>
     <link rel="icon" type="image/png" href="logo.png">
-    <meta name="description" content="Découvrez une sélection exclusive de biens locatifs (appartements et villas) à Dakar. Emménagez en toute confiance avec G.E.S Immo.">
-    <link rel="stylesheet" href="styles.css?v=16">
-    <link rel="stylesheet" href="styles-location.css?v=2">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <!-- Lenis Smooth Scroll -->
+    <link rel="stylesheet" href="styles.css?v=17">
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
 </head>
-<body class="bg-dark text-white">
-
+<body>
     <!-- Fixed Logo -->
     <a href="index.html" id="logo" class="fixed-logo" aria-label="Retour à l'accueil">
-        <img src="logo.png" alt="Logo Gesimmo" style="width: 100%; height: auto; display: block; filter: invert(1);">
+        <img src="logo.png" alt="Logo Gesimmo" style="width: 100%; height: auto; display: block;">
     </a>
 
     <!-- Header Navigation -->
@@ -34,165 +26,65 @@
         <ul>
             <li><a href="index.html">Accueil</a></li>
             <li><a href="construction.html">Construction</a></li>
-            <li><a href="achat.html">Achat</a></li>
-            <li><a href="location.html" >Location</a></li>
+            <li><a href="achat.html" >Achat</a></li>
+            <li><a href="location.html">Location</a></li>
             <li><a href="vente.html">Vente</a></li>
             <li><a href="gestion.html">Gestion</a></li>
         </ul>
     </nav>
 
-    <!-- 1. Hero Section -->
-    <section class="loc-hero" style="background-image: url('loc_hero.png');">
-        <div class="loc-hero-overlay"></div>
-        <div class="bottom-left-hero">
-            <span class="loc-badge">L'accès rapide à la qualité</span>
-            <h1>Votre prochain chez-vous, sans compromis.</h1>
-            <p>Découvrez une sélection exclusive de biens locatifs (appartements et villas) alliant confort moderne, sécurité et emplacement de choix à Dakar. Emménagez en toute confiance.</p>
-            
-        </div>
-    </section>
-
-    <!-- 2. Pourquoi choisir nos locations ? -->
-    <section class="loc-why-section">
-        <div class="container">
-            <div class="loc-why-header text-center">
-                <h2>Louer avec nous, c'est choisir la tranquillité.</h2>
-                <p>Nous savons qu'une location est souvent une étape importante. Notre rôle est de vous garantir un environnement où vous n'avez qu'à poser vos valises.</p>
-            </div>
-            
-            <div class="loc-features-grid">
-                <div class="loc-feature">
-                    <div class="loc-icon">🔧</div>
-                    <h3>Zéro Soucis<br><span style="font-size: 0.9em; font-weight: 400; color: #aaa;">Entretien assuré</span></h3>
-                    <p>Nos équipes veillent à ce que chaque installation (plomberie, électricité, climatisation) fonctionne parfaitement.</p>
-                </div>
-                <div class="loc-feature">
-                    <div class="loc-icon">📄</div>
-                    <h3>Transparence<br><span style="font-size: 0.9em; font-weight: 400; color: #aaa;">Pas de mauvaises surprises</span></h3>
-                    <p>Des contrats clairs, des charges explicitées et aucune confusion sur les frais.</p>
-                </div>
-                <div class="loc-feature">
-                    <div class="loc-icon">📞</div>
-                    <h3>Réactivité<br><span style="font-size: 0.9em; font-weight: 400; color: #aaa;">Support dédié</span></h3>
-                    <p>Un problème ? Une question ? Notre service de conciergerie locative répond présent rapidement.</p>
-                </div>
-            </div>
-        </div>
     
-        <!-- Boutons deplaces -->
-        <div style="margin-top: 4rem; display: flex; gap: 1.5rem; justify-content: center;">
-            <div class="loc-hero-buttons">
-                <button onclick="openVideoModal()" class="loc-btn primary" style="cursor: pointer; border: none; font-family: inherit; font-size: 1.1rem; border-radius: 50px;">Voir les disponibilit&eacute;s (Vid&eacute;o)</button>
-                <a href="rendezvous.html" class="loc-btn secondary">Prendre rendez-vous pour une visite</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- 3. Nos Espaces Disponibles -->
-    <section id="catalogue" class="loc-spaces-section">
-        <div class="container">
-            <h2 class="section-title text-center" style="margin-bottom: 4rem; font-size: 3rem;">Nos Espaces Disponibles</h2>
-            
-            <!-- Appartements -->
-            <div class="loc-space-item">
-                <div class="loc-space-img" style="background-image: url('loc_appart.png');"></div>
-                <div class="loc-space-info">
-                    <span class="loc-tag">1</span>
-                    <h3>Appartements "Citadins"</h3>
-                    <p>Idéal pour les jeunes professionnels ou les couples. Proximité, sécurité et optimisation de l'espace.</p>
-                </div>
-            </div>
-
-            <!-- Villas -->
-            <div class="loc-space-item reverse">
-                <div class="loc-space-img" style="background-image: url('loc_villa.png');"></div>
-                <div class="loc-space-info">
-                    <span class="loc-tag">2</span>
-                    <h3>Villas Familiales</h3>
-                    <p>De l'espace, un jardin, de la sécurité. Le cadre parfait pour la sérénité de votre famille.</p>
-                </div>
-            </div>
-
-            <!-- Bureaux -->
-            <div class="loc-space-item">
-                <div class="loc-space-img" style="background-image: url('loc_bureau.png');"></div>
-                <div class="loc-space-info">
-                    <span class="loc-tag">3</span>
-                    <h3>Espaces Professionnels (Bureaux)</h3>
-                    <p>Des locaux adaptés à la croissance de votre entreprise, modernes et bien situés.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. Le Parcours de Location -->
-    <section class="loc-process-section">
-        <div class="container">
-            <div class="loc-process-wrapper">
-                <div class="loc-process-text">
-                    <h2>Le Parcours de Location (Simplifié)</h2>
-                    
-                    <div class="process-step">
-                        <div class="step-num">1</div>
-                        <div class="step-content">
-                            <h4>Sélectionnez</h4>
-                            <p>Filtrez nos annonces par budget, quartier et type de bien sur notre catalogue en ligne.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="process-step">
-                        <div class="step-num">2</div>
-                        <div class="step-content">
-                            <h4>Visitez</h4>
-                            <p>Réservez votre créneau de visite en un clic. Nos agents vous font découvrir les lieux.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="process-step">
-                        <div class="step-num">3</div>
-                        <div class="step-content">
-                            <h4>Installez-vous</h4>
-                            <p>Signature électronique, état des lieux digital et remise des clés. Simple, propre, efficace.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="loc-process-image" style="background-image: url('loc_remise_cles.png');"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. Call to action final (Le "Footer CTA") -->
-    <section class="loc-cta-footer">
-        <div class="container text-center">
-            <h2>Vous cherchez la perle rare ?</h2>
-            <p>Les biens de qualité se louent vite. Ne laissez pas passer votre futur chez-vous. Inscrivez-vous à nos alertes prioritaires pour être informé en avant-première des nouvelles disponibilités.</p>
-            <div class="loc-cta-buttons">
-                <a href="#catalogue" class="loc-btn primary-dark">Voir toutes les annonces</a>
-                <a href="https://wa.me/221000000000" target="_blank" class="loc-btn whatsapp-btn">
-                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" style="margin-right: 8px; vertical-align: middle;">
-                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.489-1.761-1.663-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.885m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
-                    </svg>
-                    Recevoir les nouveautés
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="section dark footer-section">
-        <div class="container text-center">
-            <p>&copy; 2026 G.E.S Immo. Tous droits réservés.</p>
-        </div>
-    </footer>
-
-    <!-- Init Lenis -->
     
-    <script src="script.js?v=16"></script>
+    <!-- Hero Section -->
+    <section class="section dark" style="padding-top: 150px; padding-bottom: 50px; background-color: #111;">
+        <div class="container" style="text-align: center;">
+            <h1 style="color: #fff; font-size: 3rem;">Disponibilit&eacute;s en Location</h1>
+            <p style="color: #ccc; max-width: 600px; margin: 1rem auto;">Explorez nos biens actuellement disponibles &agrave; la location &agrave; travers nos visites virtuelles.</p>
+        </div>
+    </section>
+
+    <!-- Nos Biens Disponibles -->
+    <section class="section light" style="background-color: #f9f9f9;">
+        <div class="container">
+            <div class="portfolio-grid">
+                <!-- Bien 1: F2 Location Video -->
+                <div class="portfolio-card" style="cursor: pointer;" onclick="openVideoModal()">
+                    <div class="image-slider" style="position: relative;">
+                        <!-- Thumbnail Image -->
+                        <img src="loc_appart.png" alt="Appartement F2 Miniature" style="width: 100%; height: 300px; object-fit: cover;">
+                        
+                        <!-- Play Icon Overlay -->
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.6); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <svg style="width: 24px; fill: white; margin-left: 5px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Appartement F2 Moderne</h3>
+                        <p class="location"><svg style="width: 12px; margin-right: 5px; fill: var(--primary);" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267.9 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z"/></svg> Dakar</p>
+                        <p class="desc">D&eacute;couvrez ce magnifique appartement F2. Des espaces lumineux, une finition moderne et un cadre de vie exceptionnel pour votre prochain chez-vous.</p>
+                        <div style="margin-top: 15px; font-weight: bold; color: var(--primary);">
+                            <svg style="width: 14px; margin-right: 5px; fill: currentColor; display: inline-block; vertical-align: middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M0 128C0 92.7 28.7 64 64 64H320c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128zM559.1 99.8c10.4 5.6 16.9 16.4 16.9 28.2V384c0 11.8-6.5 22.6-16.9 28.2s-23 5-32.9-1.6l-96-64L416 337.1V320 192 174.9l14.2-9.5 96-64c9.8-6.5 22.4-7.2 32.9-1.6z"/></svg> Voir la vid&eacute;o
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="script.js?v=17"></script>
 
 <a href="https://wa.me/221784632020" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) --><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zM223.9 415.2c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 334.1l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 186.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" fill="#fff"/></svg>
 </a>
 
+<!-- Lightbox Modal -->
+<div id="lightbox-modal" class="lightbox-modal">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <button class="lightbox-btn prev" onclick="changeLightboxImage(-1)">&#10094;</button>
+    <img class="lightbox-content" id="lightbox-img">
+    <button class="lightbox-btn next" onclick="changeLightboxImage(1)">&#10095;</button>
+</div>
 
 <!-- Video Modal -->
 <div id="video-modal" class="lightbox-modal" style="display: none; align-items: center; justify-content: center; flex-direction: column;">
@@ -211,60 +103,7 @@
     </div>
 </div>
 
-
 </body>
 
-</html>
-    <!-- Hero Section for Disponibilites -->
-    <section class="section dark" style="padding-top: 150px; padding-bottom: 50px; background-color: #111;">
-        <div class="container" style="text-align: center;">
-            <h1 style="color: #fff; font-size: 3rem;">Disponibilit&eacute;s en Location</h1>
-            <p style="color: #ccc; max-width: 600px; margin: 1rem auto;">Explorez nos biens actuellement disponibles &agrave; la location &agrave; travers nos visites virtuelles.</p>
-        </div>
-    </section>
-
-    <!-- Video Showcase Section -->
-    <section class="section light" style="background-color: #f9f9f9;">
-        <div class="container">
-            <div style="max-width: 900px; margin: 0 auto; background: #fff; padding: 2rem; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
-                <video controls style="width: 100%; border-radius: 8px;">
-                    <source src="locationf2.mp4" type="video/mp4">
-                    Votre navigateur ne supporte pas la balise vid&eacute;o.
-                </video>
-                <div style="margin-top: 2rem;">
-                    <h3 style="color: var(--primary); font-size: 1.8rem; margin-bottom: 1rem;">Appartement F2 Moderne</h3>
-                    <p style="color: #555; font-size: 1.1rem; line-height: 1.6;">
-                        D&eacute;couvrez ce magnifique appartement F2, id&eacute;alement situ&eacute;. Des espaces lumineux, une finition moderne et un cadre de vie exceptionnel pour votre prochain chez-vous. Id&eacute;al pour les jeunes professionnels ou les couples cherchant confort et s&eacute;curit&eacute;.
-                    </p>
-                    <div style="margin-top: 2rem; text-align: center;">
-                        <a href="rendezvous.html" class="loc-btn primary">R&eacute;server une visite physique</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Footer -->
-    <footer class="section dark footer-section">
-        <div class="container text-center">
-            <p>&copy; 2026 G.E.S Immo. Tous droits réservés.</p>
-        </div>
-    </footer>
-
-    <!-- Init Lenis -->
-    
-    <script src="script.js?v=16"></script>
-
-<a href="https://wa.me/221784632020" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) --><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zM223.9 415.2c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 334.1l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 186.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" fill="#fff"/></svg>
-</a>
-
-
-
-</div>
-
-
-</body>
 
 </html>
