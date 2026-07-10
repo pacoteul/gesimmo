@@ -418,3 +418,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// =========================================
+// Video Modal Logic
+// =========================================
+function openVideoModal() {
+    const modal = document.getElementById('video-modal');
+    const video = document.getElementById('promo-video');
+    if(modal && video) {
+        modal.style.display = "flex";
+        video.play();
+        if(window.lenis) window.lenis.stop();
+    }
+}
+
+function closeVideoModal() {
+    const modal = document.getElementById('video-modal');
+    const video = document.getElementById('promo-video');
+    if(modal && video) {
+        modal.style.display = "none";
+        video.pause();
+        video.currentTime = 0;
+        if(window.lenis) window.lenis.start();
+    }
+}
+
+window.openVideoModal = openVideoModal;
+window.closeVideoModal = closeVideoModal;
