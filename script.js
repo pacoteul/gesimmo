@@ -342,3 +342,79 @@ function moveSlider(trackId, direction) {
 
 // Make globally available
 window.moveSlider = moveSlider;
+
+// =========================================
+// Lightbox Logic
+// =========================================
+let currentLightboxTrack = null;
+let currentLightboxIndex = 0;
+
+function openLightbox(trackId, index) {
+    const modal = document.getElementById('lightbox-modal');
+    const modalImg = document.getElementById('lightbox-img');
+    const track = document.getElementById(trackId);
+    
+    if(!modal || !track) return;
+    
+    currentLightboxTrack = track;
+    currentLightboxIndex = index;
+    
+    const images = track.querySelectorAll('img');
+    modalImg.src = images[index].src;
+    
+    modal.style.display = "block";
+    
+    // Disable lenis scroll while lightbox is open
+    if(window.lenis) window.lenis.stop();
+}
+
+function closeLightbox() {
+    const modal = document.getElementById('lightbox-modal');
+    if(modal) modal.style.display = "none";
+    if(window.lenis) window.lenis.start();
+}
+
+function changeLightboxImage(direction) {
+    if(!currentLightboxTrack) return;
+    
+    const images = currentLightboxTrack.querySelectorAll('img');
+    currentLightboxIndex += direction;
+    
+    if (currentLightboxIndex >= images.length) {
+        currentLightboxIndex = 0;
+    } else if (currentLightboxIndex < 0) {
+        currentLightboxIndex = images.length - 1;
+    }
+    
+    const modalImg = document.getElementById('lightbox-img');
+    modalImg.src = images[currentLightboxIndex].src;
+}
+
+// Make globally available
+window.openLightbox = openLightbox;
+window.closeLightbox = closeLightbox;
+window.changeLightboxImage = changeLightboxImage;
+
+// Attach click events to portfolio images
+document.addEventListener('DOMContentLoaded', () => {
+    const tracks = document.querySelectorAll('.slider-track');
+    tracks.forEach(track => {
+        const images = track.querySelectorAll('img');
+        images.forEach((img, index) => {
+            img.style.cursor = 'pointer';
+            img.addEventListener('click', () => {
+                openLightbox(track.id, index);
+            });
+        });
+    });
+    
+    // Close modal when clicking outside the image
+    const modal = document.getElementById('lightbox-modal');
+    if(modal) {
+        modal.addEventListener('click', (e) => {
+            if(e.target === modal) {
+                closeLightbox();
+            }
+        });
+    }
+});
