@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nos Derni&egrave;res Ventes - GES IMMO</title>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=24">
+    <link rel="stylesheet" href="styles.css?v=25">
 </head>
 <body>
     <!-- Navigation -->
@@ -45,100 +45,162 @@
         <div class="container">
             <div class="portfolio-grid">
 
-                <div class="portfolio-card" style="cursor: pointer;" onclick="openModal('album1')">
+                <div class="portfolio-card">
                     <div class="image-slider">
-                        <img src="nos derniers vente/appartement f4 bourguiba/photo_1_2026-07-10_12-36-59.jpg" alt="Appartement F4 Bourguiba">
+                        <div class="slider-track" id="track-dv1">
+                            <img src="nos derniers vente/appartement f4 bourguiba/photo_1_2026-07-10_12-36-59.jpg" alt="Appartement F4 Bourguiba">
+                            <img src="nos derniers vente/appartement f4 bourguiba/photo_2_2026-07-10_12-36-59.jpg" alt="Appartement F4 Bourguiba">
+                            <img src="nos derniers vente/appartement f4 bourguiba/photo_3_2026-07-10_12-36-59.jpg" alt="Appartement F4 Bourguiba">
+                            <img src="nos derniers vente/appartement f4 bourguiba/photo_4_2026-07-10_12-36-59.jpg" alt="Appartement F4 Bourguiba">
+                            <img src="nos derniers vente/appartement f4 bourguiba/photo_5_2026-07-10_12-36-59.jpg" alt="Appartement F4 Bourguiba">
+                            <img src="nos derniers vente/appartement f4 bourguiba/photo_6_2026-07-10_12-36-59.jpg" alt="Appartement F4 Bourguiba">
+                            <img src="nos derniers vente/appartement f4 bourguiba/photo_7_2026-07-10_12-36-59.jpg" alt="Appartement F4 Bourguiba">
+                            <img src="nos derniers vente/appartement f4 bourguiba/photo_8_2026-07-10_12-36-59.jpg" alt="Appartement F4 Bourguiba">
+                        </div>
+                        <button class="slider-btn prev" onclick="moveSlider('track-dv1', -1)">&#10094;</button>
+                        <button class="slider-btn next" onclick="moveSlider('track-dv1', 1)">&#10095;</button>
                     </div>
                     <div class="portfolio-info">
                         <h3>Appartement F4 Bourguiba</h3>
                         <p class="location"><svg style="width: 12px; margin-right: 5px; fill: var(--primary);" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267.9 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z"/></svg> Bourguiba, Dakar</p>
                         <p class="desc">D&eacute;couvrez les images de cette r&eacute;cente vente r&eacute;ussie par G.E.S IMMO.</p>
                         <div style="margin-top: 15px; font-weight: bold; color: var(--primary);">
-                            <svg style="width: 14px; margin-right: 5px; fill: currentColor; display: inline-block; vertical-align: middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M448 80c8.8 0 16 7.2 16 16V415.8l-5-6.5-136-176c-4.5-5.9-11.6-9.3-19-9.3s-14.4 3.4-19 9.3L202 340.7l-30.5-42.7C167 291.7 159.8 288 152 288s-15 3.7-19.5 10l-80 112L48 416.3l0-.3V96c0-8.8 7.2-16 16-16H448zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm80 192a48 48 0 1 0 0-96 48 48 0 1 0 0 96z"/></svg> Voir les 8 photos
+                            <svg style="width: 14px; margin-right: 5px; fill: currentColor; display: inline-block; vertical-align: middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M448 80c8.8 0 16 7.2 16 16V415.8l-5-6.5-136-176c-4.5-5.9-11.6-9.3-19-9.3s-14.4 3.4-19 9.3L202 340.7l-30.5-42.7C167 291.7 159.8 288 152 288s-15 3.7-19.5 10l-80 112L48 416.3l0-.3V96c0-8.8 7.2-16 16-16H448zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm80 192a48 48 0 1 0 0-96 48 48 0 1 0 0 96z"/></svg> 8 photos
                         </div>
                     </div>
                 </div>
     
-                <div class="portfolio-card" style="cursor: pointer;" onclick="openModal('album2')">
+                <div class="portfolio-card">
                     <div class="image-slider">
-                        <img src="nos derniers vente/champs de 4ha Dias/photo_1_2026-07-10_13-02-52.jpg" alt="Champs de 4ha">
+                        <div class="slider-track" id="track-dv2">
+                            <img src="nos derniers vente/champs de 4ha Dias/photo_1_2026-07-10_13-02-52.jpg" alt="Champs de 4ha">
+                            <img src="nos derniers vente/champs de 4ha Dias/photo_2_2026-07-10_13-02-52.jpg" alt="Champs de 4ha">
+                            <img src="nos derniers vente/champs de 4ha Dias/photo_3_2026-07-10_13-02-52.jpg" alt="Champs de 4ha">
+                            <img src="nos derniers vente/champs de 4ha Dias/photo_4_2026-07-10_13-02-52.jpg" alt="Champs de 4ha">
+                        </div>
+                        <button class="slider-btn prev" onclick="moveSlider('track-dv2', -1)">&#10094;</button>
+                        <button class="slider-btn next" onclick="moveSlider('track-dv2', 1)">&#10095;</button>
                     </div>
                     <div class="portfolio-info">
                         <h3>Champs de 4ha</h3>
                         <p class="location"><svg style="width: 12px; margin-right: 5px; fill: var(--primary);" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267.9 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z"/></svg> Dias</p>
                         <p class="desc">D&eacute;couvrez les images de cette r&eacute;cente vente r&eacute;ussie par G.E.S IMMO.</p>
                         <div style="margin-top: 15px; font-weight: bold; color: var(--primary);">
-                            <svg style="width: 14px; margin-right: 5px; fill: currentColor; display: inline-block; vertical-align: middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M448 80c8.8 0 16 7.2 16 16V415.8l-5-6.5-136-176c-4.5-5.9-11.6-9.3-19-9.3s-14.4 3.4-19 9.3L202 340.7l-30.5-42.7C167 291.7 159.8 288 152 288s-15 3.7-19.5 10l-80 112L48 416.3l0-.3V96c0-8.8 7.2-16 16-16H448zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm80 192a48 48 0 1 0 0-96 48 48 0 1 0 0 96z"/></svg> Voir les 4 photos
+                            <svg style="width: 14px; margin-right: 5px; fill: currentColor; display: inline-block; vertical-align: middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M448 80c8.8 0 16 7.2 16 16V415.8l-5-6.5-136-176c-4.5-5.9-11.6-9.3-19-9.3s-14.4 3.4-19 9.3L202 340.7l-30.5-42.7C167 291.7 159.8 288 152 288s-15 3.7-19.5 10l-80 112L48 416.3l0-.3V96c0-8.8 7.2-16 16-16H448zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm80 192a48 48 0 1 0 0-96 48 48 0 1 0 0 96z"/></svg> 4 photos
                         </div>
                     </div>
                 </div>
     
-                <div class="portfolio-card" style="cursor: pointer;" onclick="openModal('album3')">
+                <div class="portfolio-card">
                     <div class="image-slider">
-                        <img src="nos derniers vente/hangar de 600m2/photo_1_2026-07-10_12-59-18.jpg" alt="Hangar de 600m2">
+                        <div class="slider-track" id="track-dv3">
+                            <img src="nos derniers vente/hangar de 600m2/photo_1_2026-07-10_12-59-18.jpg" alt="Hangar de 600m2">
+                            <img src="nos derniers vente/hangar de 600m2/photo_2_2026-07-10_12-59-18.jpg" alt="Hangar de 600m2">
+                            <img src="nos derniers vente/hangar de 600m2/photo_3_2026-07-10_12-59-18.jpg" alt="Hangar de 600m2">
+                        </div>
+                        <button class="slider-btn prev" onclick="moveSlider('track-dv3', -1)">&#10094;</button>
+                        <button class="slider-btn next" onclick="moveSlider('track-dv3', 1)">&#10095;</button>
                     </div>
                     <div class="portfolio-info">
                         <h3>Hangar de 600m2</h3>
                         <p class="location"><svg style="width: 12px; margin-right: 5px; fill: var(--primary);" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267.9 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z"/></svg> Dakar</p>
                         <p class="desc">D&eacute;couvrez les images de cette r&eacute;cente vente r&eacute;ussie par G.E.S IMMO.</p>
                         <div style="margin-top: 15px; font-weight: bold; color: var(--primary);">
-                            <svg style="width: 14px; margin-right: 5px; fill: currentColor; display: inline-block; vertical-align: middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M448 80c8.8 0 16 7.2 16 16V415.8l-5-6.5-136-176c-4.5-5.9-11.6-9.3-19-9.3s-14.4 3.4-19 9.3L202 340.7l-30.5-42.7C167 291.7 159.8 288 152 288s-15 3.7-19.5 10l-80 112L48 416.3l0-.3V96c0-8.8 7.2-16 16-16H448zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm80 192a48 48 0 1 0 0-96 48 48 0 1 0 0 96z"/></svg> Voir les 3 photos
+                            <svg style="width: 14px; margin-right: 5px; fill: currentColor; display: inline-block; vertical-align: middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M448 80c8.8 0 16 7.2 16 16V415.8l-5-6.5-136-176c-4.5-5.9-11.6-9.3-19-9.3s-14.4 3.4-19 9.3L202 340.7l-30.5-42.7C167 291.7 159.8 288 152 288s-15 3.7-19.5 10l-80 112L48 416.3l0-.3V96c0-8.8 7.2-16 16-16H448zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm80 192a48 48 0 1 0 0-96 48 48 0 1 0 0 96z"/></svg> 3 photos
                         </div>
                     </div>
                 </div>
     
-                <div class="portfolio-card" style="cursor: pointer;" onclick="openModal('album4')">
+                <div class="portfolio-card">
                     <div class="image-slider">
-                        <img src="nos derniers vente/maison R+1 sangalkam/photo_1_2026-07-10_12-47-00.jpg" alt="Maison R+1">
+                        <div class="slider-track" id="track-dv4">
+                            <img src="nos derniers vente/maison R+1 sangalkam/photo_1_2026-07-10_12-47-00.jpg" alt="Maison R+1">
+                            <img src="nos derniers vente/maison R+1 sangalkam/photo_2_2026-07-10_12-47-00.jpg" alt="Maison R+1">
+                            <img src="nos derniers vente/maison R+1 sangalkam/photo_3_2026-07-10_12-47-00.jpg" alt="Maison R+1">
+                            <img src="nos derniers vente/maison R+1 sangalkam/photo_4_2026-07-10_12-47-00.jpg" alt="Maison R+1">
+                        </div>
+                        <button class="slider-btn prev" onclick="moveSlider('track-dv4', -1)">&#10094;</button>
+                        <button class="slider-btn next" onclick="moveSlider('track-dv4', 1)">&#10095;</button>
                     </div>
                     <div class="portfolio-info">
                         <h3>Maison R+1</h3>
                         <p class="location"><svg style="width: 12px; margin-right: 5px; fill: var(--primary);" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267.9 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z"/></svg> Sangalkam</p>
                         <p class="desc">D&eacute;couvrez les images de cette r&eacute;cente vente r&eacute;ussie par G.E.S IMMO.</p>
                         <div style="margin-top: 15px; font-weight: bold; color: var(--primary);">
-                            <svg style="width: 14px; margin-right: 5px; fill: currentColor; display: inline-block; vertical-align: middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M448 80c8.8 0 16 7.2 16 16V415.8l-5-6.5-136-176c-4.5-5.9-11.6-9.3-19-9.3s-14.4 3.4-19 9.3L202 340.7l-30.5-42.7C167 291.7 159.8 288 152 288s-15 3.7-19.5 10l-80 112L48 416.3l0-.3V96c0-8.8 7.2-16 16-16H448zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm80 192a48 48 0 1 0 0-96 48 48 0 1 0 0 96z"/></svg> Voir les 4 photos
+                            <svg style="width: 14px; margin-right: 5px; fill: currentColor; display: inline-block; vertical-align: middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M448 80c8.8 0 16 7.2 16 16V415.8l-5-6.5-136-176c-4.5-5.9-11.6-9.3-19-9.3s-14.4 3.4-19 9.3L202 340.7l-30.5-42.7C167 291.7 159.8 288 152 288s-15 3.7-19.5 10l-80 112L48 416.3l0-.3V96c0-8.8 7.2-16 16-16H448zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm80 192a48 48 0 1 0 0-96 48 48 0 1 0 0 96z"/></svg> 4 photos
                         </div>
                     </div>
                 </div>
     
-                <div class="portfolio-card" style="cursor: pointer;" onclick="openModal('album5')">
+                <div class="portfolio-card">
                     <div class="image-slider">
-                        <img src="nos derniers vente/maison R+1 sicap carrack/photo_1_2026-07-10_13-16-26.jpg" alt="Maison R+1">
+                        <div class="slider-track" id="track-dv5">
+                            <img src="nos derniers vente/maison R+1 sicap carrack/photo_1_2026-07-10_13-16-26.jpg" alt="Maison R+1">
+                            <img src="nos derniers vente/maison R+1 sicap carrack/photo_2_2026-07-10_13-16-26.jpg" alt="Maison R+1">
+                            <img src="nos derniers vente/maison R+1 sicap carrack/photo_3_2026-07-10_13-16-26.jpg" alt="Maison R+1">
+                            <img src="nos derniers vente/maison R+1 sicap carrack/photo_4_2026-07-10_13-16-26.jpg" alt="Maison R+1">
+                            <img src="nos derniers vente/maison R+1 sicap carrack/photo_5_2026-07-10_13-16-26.jpg" alt="Maison R+1">
+                            <img src="nos derniers vente/maison R+1 sicap carrack/photo_6_2026-07-10_13-16-27.jpg" alt="Maison R+1">
+                            <img src="nos derniers vente/maison R+1 sicap carrack/photo_7_2026-07-10_13-16-27.jpg" alt="Maison R+1">
+                            <img src="nos derniers vente/maison R+1 sicap carrack/photo_8_2026-07-10_13-16-27.jpg" alt="Maison R+1">
+                        </div>
+                        <button class="slider-btn prev" onclick="moveSlider('track-dv5', -1)">&#10094;</button>
+                        <button class="slider-btn next" onclick="moveSlider('track-dv5', 1)">&#10095;</button>
                     </div>
                     <div class="portfolio-info">
                         <h3>Maison R+1</h3>
                         <p class="location"><svg style="width: 12px; margin-right: 5px; fill: var(--primary);" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267.9 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z"/></svg> Sicap Carrack</p>
                         <p class="desc">D&eacute;couvrez les images de cette r&eacute;cente vente r&eacute;ussie par G.E.S IMMO.</p>
                         <div style="margin-top: 15px; font-weight: bold; color: var(--primary);">
-                            <svg style="width: 14px; margin-right: 5px; fill: currentColor; display: inline-block; vertical-align: middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M448 80c8.8 0 16 7.2 16 16V415.8l-5-6.5-136-176c-4.5-5.9-11.6-9.3-19-9.3s-14.4 3.4-19 9.3L202 340.7l-30.5-42.7C167 291.7 159.8 288 152 288s-15 3.7-19.5 10l-80 112L48 416.3l0-.3V96c0-8.8 7.2-16 16-16H448zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm80 192a48 48 0 1 0 0-96 48 48 0 1 0 0 96z"/></svg> Voir les 8 photos
+                            <svg style="width: 14px; margin-right: 5px; fill: currentColor; display: inline-block; vertical-align: middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M448 80c8.8 0 16 7.2 16 16V415.8l-5-6.5-136-176c-4.5-5.9-11.6-9.3-19-9.3s-14.4 3.4-19 9.3L202 340.7l-30.5-42.7C167 291.7 159.8 288 152 288s-15 3.7-19.5 10l-80 112L48 416.3l0-.3V96c0-8.8 7.2-16 16-16H448zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm80 192a48 48 0 1 0 0-96 48 48 0 1 0 0 96z"/></svg> 8 photos
                         </div>
                     </div>
                 </div>
     
-                <div class="portfolio-card" style="cursor: pointer;" onclick="openModal('album6')">
+                <div class="portfolio-card">
                     <div class="image-slider">
-                        <img src="nos derniers vente/terrain 300m2 Thies/photo_1_2026-07-10_13-06-58.jpg" alt="Terrain 300m2">
+                        <div class="slider-track" id="track-dv6">
+                            <img src="nos derniers vente/terrain 300m2 Thies/photo_1_2026-07-10_13-06-58.jpg" alt="Terrain 300m2">
+                            <img src="nos derniers vente/terrain 300m2 Thies/photo_2_2026-07-10_13-06-58.jpg" alt="Terrain 300m2">
+                            <img src="nos derniers vente/terrain 300m2 Thies/photo_3_2026-07-10_13-06-58.jpg" alt="Terrain 300m2">
+                            <img src="nos derniers vente/terrain 300m2 Thies/photo_4_2026-07-10_13-06-58.jpg" alt="Terrain 300m2">
+                        </div>
+                        <button class="slider-btn prev" onclick="moveSlider('track-dv6', -1)">&#10094;</button>
+                        <button class="slider-btn next" onclick="moveSlider('track-dv6', 1)">&#10095;</button>
                     </div>
                     <div class="portfolio-info">
                         <h3>Terrain 300m2</h3>
                         <p class="location"><svg style="width: 12px; margin-right: 5px; fill: var(--primary);" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267.9 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z"/></svg> Thi&egrave;s</p>
                         <p class="desc">D&eacute;couvrez les images de cette r&eacute;cente vente r&eacute;ussie par G.E.S IMMO.</p>
                         <div style="margin-top: 15px; font-weight: bold; color: var(--primary);">
-                            <svg style="width: 14px; margin-right: 5px; fill: currentColor; display: inline-block; vertical-align: middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M448 80c8.8 0 16 7.2 16 16V415.8l-5-6.5-136-176c-4.5-5.9-11.6-9.3-19-9.3s-14.4 3.4-19 9.3L202 340.7l-30.5-42.7C167 291.7 159.8 288 152 288s-15 3.7-19.5 10l-80 112L48 416.3l0-.3V96c0-8.8 7.2-16 16-16H448zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm80 192a48 48 0 1 0 0-96 48 48 0 1 0 0 96z"/></svg> Voir les 4 photos
+                            <svg style="width: 14px; margin-right: 5px; fill: currentColor; display: inline-block; vertical-align: middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M448 80c8.8 0 16 7.2 16 16V415.8l-5-6.5-136-176c-4.5-5.9-11.6-9.3-19-9.3s-14.4 3.4-19 9.3L202 340.7l-30.5-42.7C167 291.7 159.8 288 152 288s-15 3.7-19.5 10l-80 112L48 416.3l0-.3V96c0-8.8 7.2-16 16-16H448zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm80 192a48 48 0 1 0 0-96 48 48 0 1 0 0 96z"/></svg> 4 photos
                         </div>
                     </div>
                 </div>
     
-                <div class="portfolio-card" style="cursor: pointer;" onclick="openModal('album7')">
+                <div class="portfolio-card">
                     <div class="image-slider">
-                        <img src="nos derniers vente/villa ngaparou/photo_10_2026-07-10_12-50-27.jpg" alt="Villa Ngaparou">
+                        <div class="slider-track" id="track-dv7">
+                            <img src="nos derniers vente/villa ngaparou/photo_10_2026-07-10_12-50-27.jpg" alt="Villa Ngaparou">
+                            <img src="nos derniers vente/villa ngaparou/photo_1_2026-07-10_12-50-27.jpg" alt="Villa Ngaparou">
+                            <img src="nos derniers vente/villa ngaparou/photo_2_2026-07-10_12-50-27.jpg" alt="Villa Ngaparou">
+                            <img src="nos derniers vente/villa ngaparou/photo_3_2026-07-10_12-50-27.jpg" alt="Villa Ngaparou">
+                            <img src="nos derniers vente/villa ngaparou/photo_4_2026-07-10_12-50-27.jpg" alt="Villa Ngaparou">
+                            <img src="nos derniers vente/villa ngaparou/photo_5_2026-07-10_12-50-27.jpg" alt="Villa Ngaparou">
+                            <img src="nos derniers vente/villa ngaparou/photo_6_2026-07-10_12-50-27.jpg" alt="Villa Ngaparou">
+                            <img src="nos derniers vente/villa ngaparou/photo_7_2026-07-10_12-50-27.jpg" alt="Villa Ngaparou">
+                            <img src="nos derniers vente/villa ngaparou/photo_8_2026-07-10_12-50-27.jpg" alt="Villa Ngaparou">
+                            <img src="nos derniers vente/villa ngaparou/photo_9_2026-07-10_12-50-27.jpg" alt="Villa Ngaparou">
+                        </div>
+                        <button class="slider-btn prev" onclick="moveSlider('track-dv7', -1)">&#10094;</button>
+                        <button class="slider-btn next" onclick="moveSlider('track-dv7', 1)">&#10095;</button>
                     </div>
                     <div class="portfolio-info">
                         <h3>Villa Ngaparou</h3>
                         <p class="location"><svg style="width: 12px; margin-right: 5px; fill: var(--primary);" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267.9 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z"/></svg> Ngaparou</p>
                         <p class="desc">D&eacute;couvrez les images de cette r&eacute;cente vente r&eacute;ussie par G.E.S IMMO.</p>
                         <div style="margin-top: 15px; font-weight: bold; color: var(--primary);">
-                            <svg style="width: 14px; margin-right: 5px; fill: currentColor; display: inline-block; vertical-align: middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M448 80c8.8 0 16 7.2 16 16V415.8l-5-6.5-136-176c-4.5-5.9-11.6-9.3-19-9.3s-14.4 3.4-19 9.3L202 340.7l-30.5-42.7C167 291.7 159.8 288 152 288s-15 3.7-19.5 10l-80 112L48 416.3l0-.3V96c0-8.8 7.2-16 16-16H448zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm80 192a48 48 0 1 0 0-96 48 48 0 1 0 0 96z"/></svg> Voir les 10 photos
+                            <svg style="width: 14px; margin-right: 5px; fill: currentColor; display: inline-block; vertical-align: middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M448 80c8.8 0 16 7.2 16 16V415.8l-5-6.5-136-176c-4.5-5.9-11.6-9.3-19-9.3s-14.4 3.4-19 9.3L202 340.7l-30.5-42.7C167 291.7 159.8 288 152 288s-15 3.7-19.5 10l-80 112L48 416.3l0-.3V96c0-8.8 7.2-16 16-16H448zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm80 192a48 48 0 1 0 0-96 48 48 0 1 0 0 96z"/></svg> 10 photos
                         </div>
                     </div>
                 </div>
@@ -146,6 +208,16 @@
             </div>
         </div>
     </section>
+
+    <!-- Global Lightbox Modal -->
+    <div id="lightbox-modal" class="lightbox-modal">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="Aperçu en grand">
+            <button class="lightbox-prev" onclick="changeLightboxImage(-1)">&#10094;</button>
+            <button class="lightbox-next" onclick="changeLightboxImage(1)">&#10095;</button>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -175,126 +247,7 @@
         </div>
     </footer>
 
-
-    <!-- Modal Album 1 -->
-    <div id="album1" class="lightbox-modal">
-        <span class="lightbox-close" onclick="closeModal('album1')">&times;</span>
-        <div class="lightbox-content">
-            <div class="lightbox-slider" id="slider1">
-                    <img src="nos derniers vente/appartement f4 bourguiba/photo_1_2026-07-10_12-36-59.jpg" alt="Appartement F4 Bourguiba">
-                <img src="nos derniers vente/appartement f4 bourguiba/photo_2_2026-07-10_12-36-59.jpg" alt="Appartement F4 Bourguiba">
-                <img src="nos derniers vente/appartement f4 bourguiba/photo_3_2026-07-10_12-36-59.jpg" alt="Appartement F4 Bourguiba">
-                <img src="nos derniers vente/appartement f4 bourguiba/photo_4_2026-07-10_12-36-59.jpg" alt="Appartement F4 Bourguiba">
-                <img src="nos derniers vente/appartement f4 bourguiba/photo_5_2026-07-10_12-36-59.jpg" alt="Appartement F4 Bourguiba">
-                <img src="nos derniers vente/appartement f4 bourguiba/photo_6_2026-07-10_12-36-59.jpg" alt="Appartement F4 Bourguiba">
-                <img src="nos derniers vente/appartement f4 bourguiba/photo_7_2026-07-10_12-36-59.jpg" alt="Appartement F4 Bourguiba">
-                <img src="nos derniers vente/appartement f4 bourguiba/photo_8_2026-07-10_12-36-59.jpg" alt="Appartement F4 Bourguiba">
-            </div>
-            <button class="lightbox-prev" onclick="moveSlider('slider1', -1)">&#10094;</button>
-            <button class="lightbox-next" onclick="moveSlider('slider1', 1)">&#10095;</button>
-        </div>
-    </div>
-    
-    <!-- Modal Album 2 -->
-    <div id="album2" class="lightbox-modal">
-        <span class="lightbox-close" onclick="closeModal('album2')">&times;</span>
-        <div class="lightbox-content">
-            <div class="lightbox-slider" id="slider2">
-                    <img src="nos derniers vente/champs de 4ha Dias/photo_1_2026-07-10_13-02-52.jpg" alt="Champs de 4ha">
-                <img src="nos derniers vente/champs de 4ha Dias/photo_2_2026-07-10_13-02-52.jpg" alt="Champs de 4ha">
-                <img src="nos derniers vente/champs de 4ha Dias/photo_3_2026-07-10_13-02-52.jpg" alt="Champs de 4ha">
-                <img src="nos derniers vente/champs de 4ha Dias/photo_4_2026-07-10_13-02-52.jpg" alt="Champs de 4ha">
-            </div>
-            <button class="lightbox-prev" onclick="moveSlider('slider2', -1)">&#10094;</button>
-            <button class="lightbox-next" onclick="moveSlider('slider2', 1)">&#10095;</button>
-        </div>
-    </div>
-    
-    <!-- Modal Album 3 -->
-    <div id="album3" class="lightbox-modal">
-        <span class="lightbox-close" onclick="closeModal('album3')">&times;</span>
-        <div class="lightbox-content">
-            <div class="lightbox-slider" id="slider3">
-                    <img src="nos derniers vente/hangar de 600m2/photo_1_2026-07-10_12-59-18.jpg" alt="Hangar de 600m2">
-                <img src="nos derniers vente/hangar de 600m2/photo_2_2026-07-10_12-59-18.jpg" alt="Hangar de 600m2">
-                <img src="nos derniers vente/hangar de 600m2/photo_3_2026-07-10_12-59-18.jpg" alt="Hangar de 600m2">
-            </div>
-            <button class="lightbox-prev" onclick="moveSlider('slider3', -1)">&#10094;</button>
-            <button class="lightbox-next" onclick="moveSlider('slider3', 1)">&#10095;</button>
-        </div>
-    </div>
-    
-    <!-- Modal Album 4 -->
-    <div id="album4" class="lightbox-modal">
-        <span class="lightbox-close" onclick="closeModal('album4')">&times;</span>
-        <div class="lightbox-content">
-            <div class="lightbox-slider" id="slider4">
-                    <img src="nos derniers vente/maison R+1 sangalkam/photo_1_2026-07-10_12-47-00.jpg" alt="Maison R+1">
-                <img src="nos derniers vente/maison R+1 sangalkam/photo_2_2026-07-10_12-47-00.jpg" alt="Maison R+1">
-                <img src="nos derniers vente/maison R+1 sangalkam/photo_3_2026-07-10_12-47-00.jpg" alt="Maison R+1">
-                <img src="nos derniers vente/maison R+1 sangalkam/photo_4_2026-07-10_12-47-00.jpg" alt="Maison R+1">
-            </div>
-            <button class="lightbox-prev" onclick="moveSlider('slider4', -1)">&#10094;</button>
-            <button class="lightbox-next" onclick="moveSlider('slider4', 1)">&#10095;</button>
-        </div>
-    </div>
-    
-    <!-- Modal Album 5 -->
-    <div id="album5" class="lightbox-modal">
-        <span class="lightbox-close" onclick="closeModal('album5')">&times;</span>
-        <div class="lightbox-content">
-            <div class="lightbox-slider" id="slider5">
-                    <img src="nos derniers vente/maison R+1 sicap carrack/photo_1_2026-07-10_13-16-26.jpg" alt="Maison R+1">
-                <img src="nos derniers vente/maison R+1 sicap carrack/photo_2_2026-07-10_13-16-26.jpg" alt="Maison R+1">
-                <img src="nos derniers vente/maison R+1 sicap carrack/photo_3_2026-07-10_13-16-26.jpg" alt="Maison R+1">
-                <img src="nos derniers vente/maison R+1 sicap carrack/photo_4_2026-07-10_13-16-26.jpg" alt="Maison R+1">
-                <img src="nos derniers vente/maison R+1 sicap carrack/photo_5_2026-07-10_13-16-26.jpg" alt="Maison R+1">
-                <img src="nos derniers vente/maison R+1 sicap carrack/photo_6_2026-07-10_13-16-27.jpg" alt="Maison R+1">
-                <img src="nos derniers vente/maison R+1 sicap carrack/photo_7_2026-07-10_13-16-27.jpg" alt="Maison R+1">
-                <img src="nos derniers vente/maison R+1 sicap carrack/photo_8_2026-07-10_13-16-27.jpg" alt="Maison R+1">
-            </div>
-            <button class="lightbox-prev" onclick="moveSlider('slider5', -1)">&#10094;</button>
-            <button class="lightbox-next" onclick="moveSlider('slider5', 1)">&#10095;</button>
-        </div>
-    </div>
-    
-    <!-- Modal Album 6 -->
-    <div id="album6" class="lightbox-modal">
-        <span class="lightbox-close" onclick="closeModal('album6')">&times;</span>
-        <div class="lightbox-content">
-            <div class="lightbox-slider" id="slider6">
-                    <img src="nos derniers vente/terrain 300m2 Thies/photo_1_2026-07-10_13-06-58.jpg" alt="Terrain 300m2">
-                <img src="nos derniers vente/terrain 300m2 Thies/photo_2_2026-07-10_13-06-58.jpg" alt="Terrain 300m2">
-                <img src="nos derniers vente/terrain 300m2 Thies/photo_3_2026-07-10_13-06-58.jpg" alt="Terrain 300m2">
-                <img src="nos derniers vente/terrain 300m2 Thies/photo_4_2026-07-10_13-06-58.jpg" alt="Terrain 300m2">
-            </div>
-            <button class="lightbox-prev" onclick="moveSlider('slider6', -1)">&#10094;</button>
-            <button class="lightbox-next" onclick="moveSlider('slider6', 1)">&#10095;</button>
-        </div>
-    </div>
-    
-    <!-- Modal Album 7 -->
-    <div id="album7" class="lightbox-modal">
-        <span class="lightbox-close" onclick="closeModal('album7')">&times;</span>
-        <div class="lightbox-content">
-            <div class="lightbox-slider" id="slider7">
-                    <img src="nos derniers vente/villa ngaparou/photo_10_2026-07-10_12-50-27.jpg" alt="Villa Ngaparou">
-                <img src="nos derniers vente/villa ngaparou/photo_1_2026-07-10_12-50-27.jpg" alt="Villa Ngaparou">
-                <img src="nos derniers vente/villa ngaparou/photo_2_2026-07-10_12-50-27.jpg" alt="Villa Ngaparou">
-                <img src="nos derniers vente/villa ngaparou/photo_3_2026-07-10_12-50-27.jpg" alt="Villa Ngaparou">
-                <img src="nos derniers vente/villa ngaparou/photo_4_2026-07-10_12-50-27.jpg" alt="Villa Ngaparou">
-                <img src="nos derniers vente/villa ngaparou/photo_5_2026-07-10_12-50-27.jpg" alt="Villa Ngaparou">
-                <img src="nos derniers vente/villa ngaparou/photo_6_2026-07-10_12-50-27.jpg" alt="Villa Ngaparou">
-                <img src="nos derniers vente/villa ngaparou/photo_7_2026-07-10_12-50-27.jpg" alt="Villa Ngaparou">
-                <img src="nos derniers vente/villa ngaparou/photo_8_2026-07-10_12-50-27.jpg" alt="Villa Ngaparou">
-                <img src="nos derniers vente/villa ngaparou/photo_9_2026-07-10_12-50-27.jpg" alt="Villa Ngaparou">
-            </div>
-            <button class="lightbox-prev" onclick="moveSlider('slider7', -1)">&#10094;</button>
-            <button class="lightbox-next" onclick="moveSlider('slider7', 1)">&#10095;</button>
-        </div>
-    </div>
-    
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
-    <script src="script.js?v=24"></script>
+    <script src="script.js?v=25"></script>
 </body>
 </html>
