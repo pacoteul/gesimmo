@@ -212,11 +212,9 @@
     <!-- Global Lightbox Modal -->
     <div id="lightbox-modal" class="lightbox-modal">
         <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
-        <div class="lightbox-content">
-            <img id="lightbox-img" src="" alt="Aperçu en grand">
-            <button class="lightbox-prev" onclick="changeLightboxImage(-1)">&#10094;</button>
-            <button class="lightbox-next" onclick="changeLightboxImage(1)">&#10095;</button>
-        </div>
+        <button class="lightbox-btn prev" onclick="changeLightboxImage(-1)">&#10094;</button>
+        <img class="lightbox-content" id="lightbox-img" alt="Aper&ccedil;u en grand">
+        <button class="lightbox-btn next" onclick="changeLightboxImage(1)">&#10095;</button>
     </div>
 
     <!-- Footer -->
