@@ -422,10 +422,19 @@ document.addEventListener('DOMContentLoaded', () => {
 // =========================================
 // Video Modal Logic
 // =========================================
-function openVideoModal() {
+function openVideoModal(videoSrc, title, desc) {
     const modal = document.getElementById('video-modal');
     const video = document.getElementById('promo-video');
+    const titleEl = document.getElementById('video-title');
+    const descEl = document.getElementById('video-desc');
+    
     if(modal && video) {
+        if(videoSrc) {
+            video.src = videoSrc;
+        }
+        if(title && titleEl) titleEl.innerHTML = title;
+        if(desc && descEl) descEl.innerHTML = desc;
+        
         modal.style.display = "flex";
         video.play();
         if(window.lenis) window.lenis.stop();
