@@ -445,3 +445,60 @@ function closeVideoModal() {
 
 window.openVideoModal = openVideoModal;
 window.closeVideoModal = closeVideoModal;
+
+// =========================================
+// Custom Cursor Logic
+// =========================================
+document.addEventListener("DOMContentLoaded", () => {
+    // Only initialize custom cursor for non-touch devices
+    if (window.matchMedia("(pointer: fine)").matches) {
+        const cursor = document.createElement("div");
+        cursor.classList.add("custom-cursor");
+        
+        const cursorDot = document.createElement("div");
+        cursorDot.classList.add("custom-cursor-dot");
+        
+        document.body.appendChild(cursor);
+        document.body.appendChild(cursorDot);
+
+        let mouseX = window.innerWidth / 2;
+        let mouseY = window.innerHeight / 2;
+        let cursorX = mouseX;
+        let cursorY = mouseY;
+
+        document.addEventListener("mousemove", (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            // Immediate update for dot
+            cursorDot.style.left = `${mouseX}px`;
+            cursorDot.style.top = `${mouseY}px`;
+        });
+
+        // Smooth follow for outer circle
+        const renderCursor = () => {
+            cursorX += (mouseX - cursorX) * 0.15;
+            cursorY += (mouseY - cursorY) * 0.15;
+            cursor.style.left = `${cursorX}px`;
+            cursor.style.top = `${cursorY}px`;
+            requestAnimationFrame(renderCursor);
+        };
+        renderCursor();
+
+        // Hover effect for clickables
+        const addHoverEffect = () => {
+            const clickables = document.querySelectorAll("a, button, input, textarea, select, .portfolio-card, .loc-btn, .hamburger, .close, .lightbox-close");
+            clickables.forEach(el => {
+                // Prevent duplicate listeners
+                if (!el.dataset.cursorAttached) {
+                    el.dataset.cursorAttached = "true";
+                    el.addEventListener("mouseenter", () => cursor.classList.add("hover"));
+                    el.addEventListener("mouseleave", () => cursor.classList.remove("hover"));
+                }
+            });
+        };
+        
+        addHoverEffect();
+        // Run again if DOM changes (optional, but good for dynamic content like modals)
+        setInterval(addHoverEffect, 2000);
+    }
+});
