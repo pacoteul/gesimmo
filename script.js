@@ -451,7 +451,7 @@ window.closeVideoModal = closeVideoModal;
 // =========================================
 document.addEventListener("DOMContentLoaded", () => {
     // Only initialize custom cursor for non-touch devices
-    if (window.matchMedia("(pointer: fine)").matches) {
+    if (window.innerWidth > 768) {
         const cursor = document.createElement("div");
         cursor.classList.add("custom-cursor");
         

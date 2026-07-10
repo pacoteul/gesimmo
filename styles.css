@@ -2107,7 +2107,7 @@ section.main-scroll-section {
 
 /* Custom Cursor */
 @media (min-width: 769px) {
-    body, a, button, input, textarea, select, .portfolio-card {
+    *, *::before, *::after {
         cursor: none !important;
     }
 }
