@@ -2032,3 +2032,61 @@ section.main-scroll-section {
     .lightbox-btn.next { right: 10px; padding: 10px 15px; }
     .lightbox-close { top: 10px; right: 20px; }
 }
+
+/* Trusted By / Logos Section */
+.trusted-section {
+    padding: 3rem 0;
+    background-color: #fff;
+    border-bottom: 1px solid #eaeaea;
+    overflow: hidden;
+}
+
+.trusted-title {
+    text-align: center;
+    font-size: 1rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+}
+
+.logos-marquee {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    white-space: nowrap;
+    animation: marquee 20s linear infinite;
+}
+
+.logos-marquee:hover {
+    animation-play-state: paused;
+}
+
+.logos-marquee-wrapper {
+    overflow: hidden;
+    display: flex;
+}
+
+.logo-item {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #aaa;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s ease;
+}
+
+.logo-item:hover {
+    color: var(--primary);
+}
+
+.logo-item svg {
+    width: 30px;
+    fill: currentColor;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Needs duplicate content for seamless */
+}
